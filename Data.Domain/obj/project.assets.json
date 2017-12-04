@@ -689,7 +689,7 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Alex Dochitoiu\\.nuget\\packages\\": {},
+    "C:\\Users\\Ilie Andrei Daneliuc\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
@@ -698,17 +698,17 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "c:\\users\\alex dochitoiu\\source\\repos\\FiMaS\\Data.Domain\\Data.Domain.csproj",
+      "projectUniqueName": "C:\\Users\\Ilie Andrei Daneliuc\\Desktop\\FiMaS\\Data.Domain\\Data.Domain.csproj",
       "projectName": "Data.Domain",
-      "projectPath": "c:\\users\\alex dochitoiu\\source\\repos\\FiMaS\\Data.Domain\\Data.Domain.csproj",
-      "packagesPath": "C:\\Users\\Alex Dochitoiu\\.nuget\\packages\\",
-      "outputPath": "c:\\users\\alex dochitoiu\\source\\repos\\FiMaS\\Data.Domain\\obj\\",
+      "projectPath": "C:\\Users\\Ilie Andrei Daneliuc\\Desktop\\FiMaS\\Data.Domain\\Data.Domain.csproj",
+      "packagesPath": "C:\\Users\\Ilie Andrei Daneliuc\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Ilie Andrei Daneliuc\\Desktop\\FiMaS\\Data.Domain\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Alex Dochitoiu\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Ilie Andrei Daneliuc\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

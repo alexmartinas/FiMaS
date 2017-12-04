@@ -1,0 +1,13 @@
+C:\Users\Ilie Andrei Daneliuc\Desktop\FiMaS\Business\bin\Debug\netcoreapp2.0\Business.deps.json
+C:\Users\Ilie Andrei Daneliuc\Desktop\FiMaS\Business\bin\Debug\netcoreapp2.0\Business.dll
+C:\Users\Ilie Andrei Daneliuc\Desktop\FiMaS\Business\bin\Debug\netcoreapp2.0\Business.pdb
+C:\Users\Ilie Andrei Daneliuc\Desktop\FiMaS\Business\bin\Debug\netcoreapp2.0\Data.Domain.dll
+C:\Users\Ilie Andrei Daneliuc\Desktop\FiMaS\Business\bin\Debug\netcoreapp2.0\Data.Persistence.dll
+C:\Users\Ilie Andrei Daneliuc\Desktop\FiMaS\Business\bin\Debug\netcoreapp2.0\Data.Domain.pdb
+C:\Users\Ilie Andrei Daneliuc\Desktop\FiMaS\Business\bin\Debug\netcoreapp2.0\Data.Persistence.pdb
+C:\Users\Ilie Andrei Daneliuc\Desktop\FiMaS\Business\obj\Debug\netcoreapp2.0\Business.csprojResolveAssemblyReference.cache
+C:\Users\Ilie Andrei Daneliuc\Desktop\FiMaS\Business\obj\Debug\netcoreapp2.0\Business.csproj.CoreCompileInputs.cache
+C:\Users\Ilie Andrei Daneliuc\Desktop\FiMaS\Business\obj\Debug\netcoreapp2.0\Business.AssemblyInfoInputs.cache
+C:\Users\Ilie Andrei Daneliuc\Desktop\FiMaS\Business\obj\Debug\netcoreapp2.0\Business.AssemblyInfo.cs
+C:\Users\Ilie Andrei Daneliuc\Desktop\FiMaS\Business\obj\Debug\netcoreapp2.0\Business.dll
+C:\Users\Ilie Andrei Daneliuc\Desktop\FiMaS\Business\obj\Debug\netcoreapp2.0\Business.pdb

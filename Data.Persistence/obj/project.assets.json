@@ -2,6 +2,15 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v2.0": {
+      "EnsureThatCore/1.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/netcoreapp2.0/Ensure.That.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp2.0/Ensure.That.dll": {}
+        }
+      },
       "Microsoft.CSharp/4.4.0": {
         "type": "package",
         "compile": {
@@ -896,10 +905,38 @@
         "compile": {
           "ref/netstandard1.3/System.Threading.Tasks.dll": {}
         }
+      },
+      "Data.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.0",
+        "dependencies": {
+          "EnsureThatCore": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Data.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Data.Domain.dll": {}
+        }
       }
     }
   },
   "libraries": {
+    "EnsureThatCore/1.0.0": {
+      "sha512": "+gAXDeDo0aiOPGxCuN/L46t20dH1KvrZkvwtJ/P+Cgr7fO2EzEMuMRS9HX3rw6Nt7dt4+iN++Wfj2wHxXELY1g==",
+      "type": "package",
+      "path": "ensurethatcore/1.0.0",
+      "files": [
+        "ensurethatcore.1.0.0.nupkg.sha512",
+        "ensurethatcore.nuspec",
+        "lib/net45/Ensure.That.dll",
+        "lib/net47/Ensure.That.dll",
+        "lib/netcoreapp1.1/Ensure.That.dll",
+        "lib/netcoreapp2.0/Ensure.That.dll",
+        "lib/netstandard1.6/Ensure.That.dll",
+        "lib/netstandard2.0/Ensure.That.dll"
+      ]
+    },
     "Microsoft.CSharp/4.4.0": {
       "sha512": "vvVR/B08YVghQ4jHEloxqw2ZWzEGE1AOA5E0DioUM3ujbXz6FD3AfB/0Jl2ohJPd0nXYGwmPe1En6HTsSriq1A==",
       "type": "package",
@@ -1641,7 +1678,7 @@
       ]
     },
     "Remotion.Linq/2.1.1": {
-      "sha512": "PlMPY+e6Fx0/rwvCYASSUqAWp1kYdtVJoK7DaA8GA35Hd/z/9RRrV4/XRJiMbI9BXjIt7ERUspvm6BGs/4+yuw==",
+      "sha512": "IJn0BqkvwEDpP+2qjvci7n4/a9f7DhKESLWb2/uG4xQh3rTkGTBUz69bI4IivCoKkTFAqjXxYDZw2K/npohjsw==",
       "type": "package",
       "path": "remotion.linq/2.1.1",
       "files": [
@@ -2358,7 +2395,7 @@
       ]
     },
     "System.Linq.Queryable/4.0.1": {
-      "sha512": "MQ9dQsOONkoNRrBs6keatgC7d2S3sq3txpNUdOGUjFhTxj7y9vq+8vuP2u7Qc3f++Uz2KbJC25/sxT3sFHRUcg==",
+      "sha512": "Yn/WfYe9RoRfmSLvUt2JerP0BTGGykCZkQPgojaxgzF2N0oPo+/AhB8TXOpdCcNlrG3VRtsamtK2uzsp3cqRVw==",
       "type": "package",
       "path": "system.linq.queryable/4.0.1",
       "files": [
@@ -3382,10 +3419,16 @@
         "system.threading.tasks.4.0.11.nupkg.sha512",
         "system.threading.tasks.nuspec"
       ]
+    },
+    "Data.Domain/1.0.0": {
+      "type": "project",
+      "path": "../Data.Domain/Data.Domain.csproj",
+      "msbuildProject": "../Data.Domain/Data.Domain.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.0": [
+      "Data.Domain >= 1.0.0",
       "Microsoft.EntityFrameworkCore >= 2.0.0",
       "Microsoft.EntityFrameworkCore.SqlServer >= 2.0.0",
       "Microsoft.EntityFrameworkCore.Tools >= 2.0.0",
@@ -3393,7 +3436,7 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Alex Dochitoiu\\.nuget\\packages\\": {},
+    "C:\\Users\\Ilie Andrei Daneliuc\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
@@ -3402,17 +3445,17 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "c:\\users\\alex dochitoiu\\source\\repos\\FiMaS\\Data.Persistence\\Data.Persistence.csproj",
+      "projectUniqueName": "C:\\Users\\Ilie Andrei Daneliuc\\Desktop\\FiMaS\\Data.Persistence\\Data.Persistence.csproj",
       "projectName": "Data.Persistence",
-      "projectPath": "c:\\users\\alex dochitoiu\\source\\repos\\FiMaS\\Data.Persistence\\Data.Persistence.csproj",
-      "packagesPath": "C:\\Users\\Alex Dochitoiu\\.nuget\\packages\\",
-      "outputPath": "c:\\users\\alex dochitoiu\\source\\repos\\FiMaS\\Data.Persistence\\obj\\",
+      "projectPath": "C:\\Users\\Ilie Andrei Daneliuc\\Desktop\\FiMaS\\Data.Persistence\\Data.Persistence.csproj",
+      "packagesPath": "C:\\Users\\Ilie Andrei Daneliuc\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Ilie Andrei Daneliuc\\Desktop\\FiMaS\\Data.Persistence\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Alex Dochitoiu\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Ilie Andrei Daneliuc\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -3424,7 +3467,11 @@
       },
       "frameworks": {
         "netcoreapp2.0": {
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Ilie Andrei Daneliuc\\Desktop\\FiMaS\\Data.Domain\\Data.Domain.csproj": {
+              "projectPath": "C:\\Users\\Ilie Andrei Daneliuc\\Desktop\\FiMaS\\Data.Domain\\Data.Domain.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

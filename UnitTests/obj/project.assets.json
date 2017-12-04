@@ -664,7 +664,7 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Alex Dochitoiu\\.nuget\\packages\\": {},
+    "C:\\Users\\Ilie Andrei Daneliuc\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
@@ -673,17 +673,17 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "c:\\users\\alex dochitoiu\\source\\repos\\FiMaS\\UnitTests\\UnitTests.csproj",
+      "projectUniqueName": "C:\\Users\\Ilie Andrei Daneliuc\\Desktop\\FiMaS\\UnitTests\\UnitTests.csproj",
       "projectName": "UnitTests",
-      "projectPath": "c:\\users\\alex dochitoiu\\source\\repos\\FiMaS\\UnitTests\\UnitTests.csproj",
-      "packagesPath": "C:\\Users\\Alex Dochitoiu\\.nuget\\packages\\",
-      "outputPath": "c:\\users\\alex dochitoiu\\source\\repos\\FiMaS\\UnitTests\\obj\\",
+      "projectPath": "C:\\Users\\Ilie Andrei Daneliuc\\Desktop\\FiMaS\\UnitTests\\UnitTests.csproj",
+      "packagesPath": "C:\\Users\\Ilie Andrei Daneliuc\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Ilie Andrei Daneliuc\\Desktop\\FiMaS\\UnitTests\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Alex Dochitoiu\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Ilie Andrei Daneliuc\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

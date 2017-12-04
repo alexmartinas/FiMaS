@@ -1,6 +1,10 @@
+using Business;
+using Data.Domain.Interfeces;
+using Data.Persistence;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.SpaServices.Webpack;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Swashbuckle.AspNetCore.Swagger;
@@ -20,6 +24,14 @@ namespace Presentation
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
+
+            //Connect to Sql
+            var connection = @"Server = .\SQLEXPRESS; Database = FiMaS.DB; Trusted_Connection = true;";
+
+            services.AddDbContext<DatabaseContext>(options => options.UseSqlServer(connection));
+            services.AddTransient<IDatabaseContext, DatabaseContext>();
+
+            services.AddTransient<IUserRepository, UserRepository>();
 
             // Register the Swagger generator, defining one or more Swagger documents
             services.AddSwaggerGen(c =>
