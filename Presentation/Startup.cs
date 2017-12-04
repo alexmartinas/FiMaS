@@ -32,6 +32,8 @@ namespace Presentation
             services.AddTransient<IDatabaseContext, DatabaseContext>();
 
             services.AddTransient<IUserRepository, UserRepository>();
+            services.AddTransient<ICountryRepository, CountryRepository>();
+            services.AddTransient<ICityRepository, CityRepository>();
 
             // Register the Swagger generator, defining one or more Swagger documents
             services.AddSwaggerGen(c =>

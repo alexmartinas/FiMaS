@@ -16,6 +16,11 @@ namespace Business
             _databaseContext = databaseContext;
         }
 
+        public IReadOnlyList<User> GetAll()
+        {
+            return _databaseContext.Users.ToList();
+        }
+
         public void Add(User user)
         {
             _databaseContext.Users.Add(user);
@@ -32,11 +37,6 @@ namespace Business
             var user = GetById(id);
             _databaseContext.Users.Remove(user);
             _databaseContext.SaveChanges();
-        }
-
-        public IReadOnlyList<User> GetAll()
-        {
-            return _databaseContext.Users.ToList();
         }
 
         public void Edit(User user)

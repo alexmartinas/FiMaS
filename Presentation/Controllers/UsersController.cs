@@ -11,10 +11,18 @@ namespace Presentation.Controllers
     public class UsersController : Controller
     {
         private readonly IUserRepository _repository;
+        private readonly ICountryRepository _countryRepository;
+        private readonly ICityRepository _cityRepository;
 
-        public UsersController(IUserRepository repository)
+        public UsersController (
+            IUserRepository repository, 
+            ICountryRepository countryRepository,
+            ICityRepository cityRepository
+            )
         {
             _repository = repository;
+            //_countryRepository = countryRepository;
+            //_cityRepository = cityRepository;
         }
 
         [HttpGet]
@@ -26,16 +34,33 @@ namespace Presentation.Controllers
         [HttpGet("{id:guid}")]
         public User Get(Guid id)
         {
-            return _repository.GetById(id);
+            var entity = _repository.GetById(id);
+            //var userModel = new GetUserModel {
+            //    Name = entity.Name,
+            //    Email = entity.Email,
+            //    Country = entity.Country.Name,
+            //    City = entity.City.Name
+            //};
+            return entity;
         }
 
         [HttpPost]
         public void Post([FromBody]CreateUserModel user)
         {
-            var idCountry = Guid.NewGuid(); // TODO
-            var idCity = Guid.NewGuid();    // TODO
+            //TODO
+            var country = new Country
+            {
+                Id = Guid.NewGuid(),
+                Name = user.Name
+            };
+            //TODO
+            var city = new City
+            {
+                Id = Guid.NewGuid(),
+                Name = user.City
+            };
 
-            var entity = Data.Domain.Entities.User.Create(user.Name, user.Email, user.Password, idCountry, idCity);
+            var entity = Data.Domain.Entities.User.Create(user.Name, user.Email, user.Password, country, city);
             _repository.Add(entity);
         }
 
@@ -43,7 +68,22 @@ namespace Presentation.Controllers
         public void Put(Guid id, [FromBody]UpdateUserModel user)
         {
             var entity = _repository.GetById(id);
-            entity.Update(user.Name, user.Email, user.Password, user.IdCountry, user.IdCity);
+            //var country = _countryRepository.GetByName(user.Country);
+            //var city = _cityRepository.GetByName(user.City);
+            //TODO
+            var country = new Country
+            {
+                Id = Guid.NewGuid(),
+                Name = user.Name
+            };
+            //TODO
+            var city = new City
+            {
+                Id = Guid.NewGuid(),
+                Name = user.City
+            };
+
+            entity.Update(user.Name, user.Email, user.Password, country, city);
             _repository.Edit(entity);
         }
 

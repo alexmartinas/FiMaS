@@ -5,12 +5,10 @@ namespace Data.Domain.Entities
 {
     public class User
     {
-        [Key]
         public Guid Id { get; set; }
 
         [Required]
-        [MinLength(3)]
-        [MaxLength(32)]
+        [MinLength(3), MaxLength(32)]
         public string Name { get; set; }
 
         [Required]
@@ -19,30 +17,27 @@ namespace Data.Domain.Entities
         public string Email { get; set; }
 
         [Required]
-        [MinLength(8)]
-        [MaxLength(32)]
+        [MinLength(8), MaxLength(32)]
         public string Password { get; set; }
 
-        [Required]
-        public Guid IdCountry { get; set; }
+        public Country Country { get; set; }
 
-        [Required]
-        public Guid IdCity { get; set; }
+        public City City { get; set; }
 
-        public static User Create(string name, string email, string password, Guid idCountry, Guid idCity)
+        public static User Create(string name, string email, string password, Country country, City city)
         {
             var instance = new User { Id = Guid.NewGuid() };
-            instance.Update(name, email, password, idCountry, idCity);
+            instance.Update(name, email, password, country, city);
             return instance;
         }
 
-        public void Update(string name, string email, string password, Guid idCountry, Guid idCity)
+        public void Update(string name, string email, string password, Country coutry, City city)
         {
             this.Name = name;
             this.Email = email;
             this.Password = password;
-            this.IdCountry = idCountry;
-            this.IdCity = idCity;
+            this.Country = coutry;
+            this.City = city;
         }
     }
 }
