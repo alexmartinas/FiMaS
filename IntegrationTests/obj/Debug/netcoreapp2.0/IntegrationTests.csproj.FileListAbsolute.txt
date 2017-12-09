@@ -1,9 +1,0 @@
-C:\Users\Ilie Andrei Daneliuc\Desktop\FiMaS\IntegrationTests\bin\Debug\netcoreapp2.0\IntegrationTests.deps.json
-C:\Users\Ilie Andrei Daneliuc\Desktop\FiMaS\IntegrationTests\bin\Debug\netcoreapp2.0\IntegrationTests.dll
-C:\Users\Ilie Andrei Daneliuc\Desktop\FiMaS\IntegrationTests\bin\Debug\netcoreapp2.0\IntegrationTests.pdb
-C:\Users\Ilie Andrei Daneliuc\Desktop\FiMaS\IntegrationTests\obj\Debug\netcoreapp2.0\IntegrationTests.csprojResolveAssemblyReference.cache
-C:\Users\Ilie Andrei Daneliuc\Desktop\FiMaS\IntegrationTests\obj\Debug\netcoreapp2.0\IntegrationTests.csproj.CoreCompileInputs.cache
-C:\Users\Ilie Andrei Daneliuc\Desktop\FiMaS\IntegrationTests\obj\Debug\netcoreapp2.0\IntegrationTests.AssemblyInfoInputs.cache
-C:\Users\Ilie Andrei Daneliuc\Desktop\FiMaS\IntegrationTests\obj\Debug\netcoreapp2.0\IntegrationTests.AssemblyInfo.cs
-C:\Users\Ilie Andrei Daneliuc\Desktop\FiMaS\IntegrationTests\obj\Debug\netcoreapp2.0\IntegrationTests.dll
-C:\Users\Ilie Andrei Daneliuc\Desktop\FiMaS\IntegrationTests\obj\Debug\netcoreapp2.0\IntegrationTests.pdb
