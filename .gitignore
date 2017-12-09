@@ -25,7 +25,7 @@ bld/
 bin/
 Bin/
 obj/
-obj
+*obj/
 Obj/
 
 .assets*
