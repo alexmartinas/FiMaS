@@ -25,7 +25,10 @@ bld/
 bin/
 Bin/
 obj/
+obj
 Obj/
+
+.assets*
 
 # Visual Studio 2015 cache/options directory
 .vs/
