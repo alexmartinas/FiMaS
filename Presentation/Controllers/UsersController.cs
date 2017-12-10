@@ -32,8 +32,8 @@ namespace Presentation.Controllers
         [HttpPost]
         public void Post([FromBody]CreateUserModel user)
         {
-            var idCountry = Guid.NewGuid(); // TODO
-            var idCity = Guid.NewGuid();    // TODO
+            var country = Guid.NewGuid(); // TODO
+            var city = Guid.NewGuid();    // TODO
 
             var entity = Data.Domain.Entities.User.Create(user.Name, user.Email, user.Password, idCountry, idCity);
             _repository.Add(entity);
