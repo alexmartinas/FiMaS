@@ -9,9 +9,16 @@
 *.userosscache
 *.sln.docstates
 .idea/
+Presentation/node_modules/
+
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
+
+#Sonarqube files
+.scannerwork/
+
+
 
 # Build results
 [Dd]ebug/
