@@ -1,42 +1,50 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace Data.Domain.Entities
 {
     public class User
     {
-        public Guid Id { get; set; }
+        [Key]
+        public Guid Id { get; private set; }
 
         [Required]
-        [MinLength(3), MaxLength(32)]
-        public string Name { get; set; }
+        [MinLength(3)]
+        [MaxLength(32)]
+        public string Name { get; private set; }
 
         [Required]
         [DataType(DataType.EmailAddress)]
         [EmailAddress]
-        public string Email { get; set; }
+        public string Email { get; private set; }
 
         [Required]
-        [MinLength(8), MaxLength(32)]
-        public string Password { get; set; }
+        [MinLength(8)]
+        [MaxLength(32)]
+        public string Password { get; private set; }
 
-        public Country Country { get; set; }
+        [Required]
+        public Country Country { get; private set; }
 
-        public City City { get; set; }
+        [Required]
+        public City City { get; private set; }
 
-        public static User Create(string name, string email, string password, Country country, City city)
+        public List<Product> Products { get; private set; }
+
+        public static User Create(string name, string email, string password, Country idCountry, City idCity)
         {
             var instance = new User { Id = Guid.NewGuid() };
             instance.Update(name, email, password, country, city);
             return instance;
         }
 
-        public void Update(string name, string email, string password, Country coutry, City city)
+        public void Update(string name, string email, string password, Country country, City city)
         {
             this.Name = name;
             this.Email = email;
             this.Password = password;
-            this.Country = coutry;
+            this.Country = country;
             this.City = city;
         }
     }

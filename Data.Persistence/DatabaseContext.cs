@@ -11,7 +11,10 @@ namespace Data.Persistence
         }
         
         public DbSet<User> Users { get; set; }
-        public DbSet<Country> Countries { get; set; }
+        public DbSet<Product> Productss { get; set; }
+        public DbSet<Receipt> Receipts { get; set; }
         public DbSet<City> Cities { get; set; }
+        public DbSet<Country> Countries { get; set; }
+        public DbSet<Shop> Shops { get; set; }
     }
 }

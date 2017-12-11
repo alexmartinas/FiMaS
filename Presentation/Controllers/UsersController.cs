@@ -44,21 +44,12 @@ namespace Presentation.Controllers
             return entity;
         }
 
+        /*
         [HttpPost]
         public void Post([FromBody]CreateUserModel user)
         {
-            //TODO
-            var country = new Country
-            {
-                Id = Guid.NewGuid(),
-                Name = user.Name
-            };
-            //TODO
-            var city = new City
-            {
-                Id = Guid.NewGuid(),
-                Name = user.City
-            };
+            var country = Guid.NewGuid(); // TODO
+            var city = Guid.NewGuid();    // TODO
 
             var entity = Data.Domain.Entities.User.Create(user.Name, user.Email, user.Password, country, city);
             _repository.Add(entity);
@@ -86,6 +77,7 @@ namespace Presentation.Controllers
             entity.Update(user.Name, user.Email, user.Password, country, city);
             _repository.Edit(entity);
         }
+        */
 
         [HttpDelete("{id}")]
         public void Delete(Guid id)

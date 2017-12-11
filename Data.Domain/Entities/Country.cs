@@ -6,11 +6,13 @@ namespace Data.Domain.Entities
 {
     public class Country
     {
-        public Guid Id { get; set; }
+        public Guid Id { get; private set; }
 
         [Required]
-        public string Name { get; set; }
+        public string Name { get; private set; }
 
-        //public IReadOnlyList<City> Cities { get; set; }
+        public List<City> Cities { get; private set; }
+        public List<User> Users { get; private set; }
+        public List<Shop> Shops { get; private set; }
     }
 }
