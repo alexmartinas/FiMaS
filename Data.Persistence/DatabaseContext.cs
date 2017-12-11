@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Data.Persistence
 {
-    public class DatabaseContext : DbContext, IDatabaseContext
+    public sealed class DatabaseContext : DbContext, IDatabaseContext
     {
         public DatabaseContext(DbContextOptions<DatabaseContext> options) : base(options)
         {
@@ -11,5 +11,6 @@ namespace Data.Persistence
         }
         
         public DbSet<User> Users { get; set; }
+        public DbSet<Shop> Shops { get; set; }
     }
 }
