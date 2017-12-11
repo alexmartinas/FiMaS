@@ -13,6 +13,8 @@ namespace Data.Domain.Interfeces
         IReadOnlyList<Product> getProductsBoughtBetween(DateTime startDate, DateTime endDate);
         IReadOnlyList<Product> getProductsByCategory(string category);
         void updateProduct(Guid id, Product product);
+        void deleteProduct(Guid productId);
+        void addProduct(double price, string name, DateTime boughtAt, string provider, string category, double quantity, Guid ownerId);
 
     }
 }

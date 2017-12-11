@@ -11,8 +11,8 @@ namespace Data.Domain.Entities
         [Required]
         public string Name { get; private set; }
 
-        public IReadOnlyList<City> Cities { get; private set; }
-        public IReadOnlyList<User> Users { get; private set; }
-        public IReadOnlyList<Shop> Shops { get; private set; }
+        public List<City> Cities { get; private set; }
+        public List<User> Users { get; private set; }
+        public List<Shop> Shops { get; private set; }
     }
 }

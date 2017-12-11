@@ -22,6 +22,6 @@ namespace Data.Domain.Entities
         [Required]
         public string Address { get; private set; }
 
-        public IReadOnlyList<Product> Products { get; private set; }
+        public List<Product> Products { get; private set; }
     }
 }

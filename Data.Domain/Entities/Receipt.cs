@@ -13,7 +13,7 @@ namespace Data.Domain.Entities
         public User User { get; private set; }
 
         [Required]
-        public IReadOnlyList<Product> Products { get; private set; }
+        public List<Product> Products { get; private set; }
 
         [Required]
         [DataType(DataType.DateTime)]

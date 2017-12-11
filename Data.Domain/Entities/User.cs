@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace Data.Domain.Entities
@@ -28,6 +29,8 @@ namespace Data.Domain.Entities
 
         [Required]
         public City City { get; private set; }
+
+        public List<Product> Products { get; private set; }
 
         public static User Create(string name, string email, string password, Country idCountry, City idCity)
         {
