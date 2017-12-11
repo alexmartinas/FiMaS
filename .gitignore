@@ -9,6 +9,7 @@
 *.userosscache
 *.sln.docstates
 .idea/
+*bin/
 Presentation/node_modules/
 
 
@@ -81,6 +82,7 @@ dlldata.c
 *.svclog
 *.scc
 *.cache
+
 # Chutzpah Test files
 _Chutzpah*
 

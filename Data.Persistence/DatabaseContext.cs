@@ -11,6 +11,5 @@ namespace Data.Persistence
         }
         
         public DbSet<User> Users { get; set; }
-        public DbSet<Shop> Shops { get; set; }
     }
 }

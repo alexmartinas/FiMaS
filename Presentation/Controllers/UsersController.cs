@@ -29,6 +29,7 @@ namespace Presentation.Controllers
             return _repository.GetById(id);
         }
 
+        /*
         [HttpPost]
         public void Post([FromBody]CreateUserModel user)
         {
@@ -46,6 +47,7 @@ namespace Presentation.Controllers
             entity.Update(user.Name, user.Email, user.Password, user.IdCountry, user.IdCity);
             _repository.Edit(entity);
         }
+        */
 
         [HttpDelete("{id}")]
         public void Delete(Guid id)
