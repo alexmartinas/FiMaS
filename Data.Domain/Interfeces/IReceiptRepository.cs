@@ -14,6 +14,6 @@ namespace Data.Domain.Interfeces
         void DeleteReceipt(Guid id);
         void AddProduct(Guid receiptId, Product product, Guid ownerId);
         void DeleteProduct(Guid receiptId, Guid productId);
-        IReadOnlyList<Receipt> GetById(Guid id);
+        Receipt GetById(Guid id);
     }
 }

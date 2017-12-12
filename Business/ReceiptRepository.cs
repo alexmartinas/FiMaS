@@ -16,37 +16,37 @@ namespace Business
             _databaseContext = databaseContext;
         }
 
-        IReadOnlyList<Receipt> GetReceiptsByOwner(Guid ownerId)
+        public  IReadOnlyList<Receipt> GetReceiptsByOwner(Guid ownerId)
         {
             return _databaseContext.Receipts.ToList();
         }
-        IReadOnlyList<Receipt> GetReceiptsByPrintedDate(Guid ownerId, DateTime date)
+        public IReadOnlyList<Receipt> GetReceiptsByPrintedDate(Guid ownerId, DateTime date)
         {
             return _databaseContext.Receipts.ToList();
         }
-        void EditRecceipt(Guid id, Receipt receipt)
+        public void EditRecceipt(Guid id, Receipt receipt)
         {
 
         }
-        void CreateReceipt(Guid ownerId, DateTime printedAt)
+        public void CreateReceipt(Guid ownerId, DateTime printedAt)
         {
 
         }
-        void DeleteReceipt(Guid id)
+        public void DeleteReceipt(Guid id)
         {
 
         }
-        void AddProduct(Guid receiptId, Product product, Guid ownerId)
+        public void AddProduct(Guid receiptId, Product product, Guid ownerId)
         {
 
         }
-        void DeleteProduct(Guid receiptId, Guid productId)
+        public void DeleteProduct(Guid receiptId, Guid productId)
         {
 
         }
-        IReadOnlyList<Receipt> GetById(Guid Id)
+        public Receipt GetById(Guid Id)
         {
-            return _databaseContext.Receipts.ToList();
+            return _databaseContext.Receipts.FirstOrDefault(t => t.Id == Id);
         }
     }
 }
