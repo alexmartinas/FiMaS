@@ -37,10 +37,7 @@ namespace Presentation.Controllers
         [HttpPost("city/{cityId}")]
         public IActionResult Post(Guid cityId, [FromBody]Shop shop)
         {
-            City c = new City("Bacau", new Country("Romania"), new List<User>());
-            Shop entity = new Shop(shop.Name, new Country("Romania"), c, shop.Address);
-
-            _repository.Add(cityId, entity);
+            _repository.Add(cityId, shop);
             return Ok(shop);
         }
     }
