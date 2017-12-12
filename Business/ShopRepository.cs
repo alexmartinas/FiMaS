@@ -18,8 +18,7 @@ namespace Business
 
         public IReadOnlyList<Shop> GetShopsByCity(Guid cityId)
         {
-            ICityRepository cityRepository = new CityRepository(_databaseContext);
-            var city = cityRepository.GetById(cityId);
+            var city = _databaseContext.Cities.FirstOrDefault(c => c.Id == cityId);
             return city.Shops.AsReadOnly();
         }
         
@@ -40,14 +39,15 @@ namespace Business
 
         public void Add(Guid cityId, Shop shop)
         {
-            ICityRepository cityRepository = new CityRepository(_databaseContext);
-            var city = cityRepository.GetById(cityId);
+            var city = _databaseContext.Cities.FirstOrDefault(c => c.Id == cityId);
             city.Shops.Add(shop);
+            _databaseContext.SaveChanges();
         }
 
         public void Edit(Shop shop)
         {
             _databaseContext.Shops.Update(shop);
+            _databaseContext.SaveChanges();
         }
 
         public void Delete(Guid cityId, Guid shopId)
