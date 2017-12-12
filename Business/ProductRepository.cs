@@ -65,6 +65,11 @@ namespace Business
             return _databaseContext.Products.Where(p => p.Provider == provider);
         }
 
+        public IQueryable<Product> GetProducts()
+        {
+            return _databaseContext.Products;
+        }
+
         public void UpdateProduct(Product product)
         {
             try

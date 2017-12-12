@@ -8,6 +8,7 @@ namespace Data.Domain.Interfeces
 {
     public interface IProductRepository
     {
+        IQueryable<Product> GetProducts();
         IQueryable<Product> GetProductsByProvider(string provider);
         IQueryable<Product> GetProductsByName(string name);
         IQueryable<Product> GetProductsBoughtAt(DateTime date);

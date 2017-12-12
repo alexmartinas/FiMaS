@@ -1,3 +1,4 @@
+using AutoMapper;
 using Business;
 using Data.Domain.Interfeces;
 using Data.Persistence;
@@ -30,7 +31,7 @@ namespace Presentation
 
             services.AddDbContext<DatabaseContext>(options => options.UseSqlServer(connection));
             services.AddTransient<IDatabaseContext, DatabaseContext>();
-
+            services.AddAutoMapper();
             services.AddTransient<IUserRepository, UserRepository>();
             services.AddTransient<IProductRepository, ProductRepository>();
 
