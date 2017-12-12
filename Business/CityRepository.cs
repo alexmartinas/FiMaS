@@ -16,6 +16,11 @@ namespace Business
             _databaseContext = databaseContext;
         }
 
+        public IReadOnlyList<City> GetAll()
+        {
+            return _databaseContext.Cities.ToList();
+        }
+
         public City GetById(Guid id)
         {
             return _databaseContext.Cities.FirstOrDefault(t => t.Id == id);
@@ -23,12 +28,7 @@ namespace Business
 
         public City GetByName(string name)
         {
-            return _databaseContext.Cities.FirstOrDefault(t => t.Name == name);
-        }
-
-        public IReadOnlyList<City> GetAll()
-        {
-            return _databaseContext.Cities.ToList();
+            return _databaseContext.Cities.FirstOrDefault(t => t.Name.Equals(name));
         }
 
         public void Add(City city)

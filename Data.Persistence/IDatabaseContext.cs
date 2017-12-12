@@ -12,7 +12,6 @@ namespace Data.Persistence
         DbSet<Country> Countries { get; set; }
         DbSet<Shop> Shops { get; set; }
 
-
         int SaveChanges();
     }
 }

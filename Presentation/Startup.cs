@@ -33,7 +33,9 @@ namespace Presentation
             services.AddTransient<IDatabaseContext, DatabaseContext>();
             services.AddAutoMapper();
             services.AddTransient<IUserRepository, UserRepository>();
+
             services.AddTransient<IProductRepository, ProductRepository>();
+
 
 
             // Register the Swagger generator, defining one or more Swagger documents

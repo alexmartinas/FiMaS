@@ -10,6 +10,7 @@ namespace Data.Domain.Entities
 
         [Required]
         public string Name { get; private set; }
+
         public Country Country { get; private set; }
         public List<User> Users { get; private set; }
         public List<Shop> Shops { get; private set; }
