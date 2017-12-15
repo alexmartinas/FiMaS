@@ -19,7 +19,7 @@
     },
     "IIS Express": {
       "commandName": "IISExpress",
-      "workingDirectory": "C:\\Users\\Alex Dochitoiu\\Desktop\\FiMaS 15.12\\FiMaS\\Presentation",
+      "workingDirectory": "",
       "launchBrowser": true,
       "launchUrl": "http://localhost:57484/"
     }
