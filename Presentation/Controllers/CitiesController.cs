@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using Presentation.DTOs.CityModel;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Presentation.Controllers
 {
@@ -25,19 +26,11 @@ namespace Presentation.Controllers
         {
             var entities = _cityRepository.GetAll();
 
-            var getCitiesModel = new List<GetCityModel>();
-
-            foreach (var city in entities)
-            {
-                var cityModel = new GetCityModel
+            return entities.Select(city => new GetCityModel
                 {
                     Name = city.Name
-                };
-
-                getCitiesModel.Add(cityModel);
-            }
-
-            return getCitiesModel;
+                })
+                .ToList();
         }
 
         [Route("GetCitiesByCountry")]
@@ -45,19 +38,12 @@ namespace Presentation.Controllers
         public List<GetCityModel> Get(string countryName)
         {
             var country = _countryRepository.GetByName(countryName);
-            var getCitiesModel = new List<GetCityModel>();
 
-            foreach (var city in country.Cities)
-            {
-                var cityModel = new GetCityModel
+            return country.Cities.Select(city => new GetCityModel
                 {
                     Name = city.Name
-                };
-
-                getCitiesModel.Add(cityModel);
-            }
-
-            return getCitiesModel;
+                })
+                .ToList();
         }
 
         [HttpGet("{id:guid}")]

@@ -30,11 +30,5 @@ namespace Business
         {
             return _databaseContext.Countries.FirstOrDefault(t => t.Name.Equals(name));
         }
-
-        public void Add(Country country)
-        {
-            _databaseContext.Countries.Add(country);
-            _databaseContext.SaveChanges();
-        }
     }
 }

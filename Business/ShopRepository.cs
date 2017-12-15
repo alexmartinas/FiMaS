@@ -44,7 +44,7 @@ namespace Business
             _databaseContext.SaveChanges();
         }
 
-        public void Edit(Shop shop)
+        public void Edit(Guid cityId, Shop shop)
         {
             _databaseContext.Shops.Update(shop);
             _databaseContext.SaveChanges();

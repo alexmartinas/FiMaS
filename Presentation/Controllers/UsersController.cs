@@ -48,7 +48,7 @@ namespace Presentation.Controllers
         [HttpGet("{id:guid}")]
         public GetUserModel Get(Guid id)
         {
-            var entity = _userRepository.GetById(id);
+            var entity = _userRepository.Get(id);
             var getUserModel = new GetUserModel {
                 Name = entity.Name,
                 Email = entity.Email,
@@ -72,7 +72,7 @@ namespace Presentation.Controllers
         [HttpPut("{id}")]
         public void Put(Guid id, [FromBody]UpdateUserModel user)
         {
-            var entity = _userRepository.GetById(id);
+            var entity = _userRepository.Get(id);
             var country = _countryRepository.GetByName(user.Country);
             var city = _cityRepository.GetByName(user.City);
 

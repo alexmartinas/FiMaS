@@ -1,8 +1,6 @@
 ﻿using Data.Domain.Entities;
 using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
 namespace Data.Domain.Interfeces
 {
@@ -18,6 +16,5 @@ namespace Data.Domain.Interfeces
         void UpdateProduct(Product product);
         void DeleteProduct(Guid productId);
         Product AddProduct(Product product);
-
     }
 }

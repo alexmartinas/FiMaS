@@ -30,11 +30,5 @@ namespace Business
         {
             return _databaseContext.Cities.FirstOrDefault(t => t.Name.Equals(name));
         }
-
-        public void Add(City city)
-        {
-            _databaseContext.Cities.Add(city);
-            _databaseContext.SaveChanges();
-        }
     }
 }

@@ -2,34 +2,26 @@
   "iisSettings": {
     "windowsAuthentication": false,
     "anonymousAuthentication": true,
+    "iis": {
+      "applicationUrl": "http://localhost/Presentation",
+      "sslPort": 0
+    },
     "iisExpress": {
-<<<<<<< HEAD
-      "applicationUrl": "http://localhost:53993/",
-=======
-      "applicationUrl": "http://localhost:53799/",
->>>>>>> origin/miron
+      "applicationUrl": "http://localhost:57484/",
       "sslPort": 0
     }
   },
   "profiles": {
-    "IIS Express": {
+    "Start": {
       "commandName": "IISExpress",
       "launchBrowser": true,
-      "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
-      }
+      "ErrorString": "Invalid property identifier character: <. Path 'iisSettings.iisExpress', line 6, position 0."
     },
-    "Presentation": {
-      "commandName": "Project",
+    "IIS Express": {
+      "commandName": "IISExpress",
+      "workingDirectory": "C:\\Users\\Alex Dochitoiu\\Desktop\\FiMaS 15.12\\FiMaS\\Presentation",
       "launchBrowser": true,
-      "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
-      },
-<<<<<<< HEAD
-      "applicationUrl": "http://localhost:53994/"
-=======
-      "applicationUrl": "http://localhost:53823/"
->>>>>>> origin/miron
+      "launchUrl": "http://localhost:57484/"
     }
   }
 }
