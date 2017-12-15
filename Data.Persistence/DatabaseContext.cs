@@ -5,7 +5,7 @@ namespace Data.Persistence
 {
     public sealed class DatabaseContext : DbContext, IDatabaseContext
     {
-        public DatabaseContext(DbContextOptions<DatabaseContext> options) : base(options)
+        public DatabaseContext(DbContextOptions options) : base(options)
         {
             Database.EnsureCreated();
         }

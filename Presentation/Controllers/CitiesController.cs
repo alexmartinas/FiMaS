@@ -33,13 +33,13 @@ namespace Presentation.Controllers
                 .ToList();
         }
 
-        [Route("GetCitiesByCountry")]
+        [Route("{country}")]
         [HttpGet]
-        public List<GetCityModel> Get(string countryName)
+        public List<GetCityModel> Get(string country)
         {
-            var country = _countryRepository.GetByName(countryName);
+            var entity = _countryRepository.GetByName(country);
 
-            return country.Cities.Select(city => new GetCityModel
+            return entity.Cities.Select(city => new GetCityModel
                 {
                     Name = city.Name
                 })

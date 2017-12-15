@@ -1,6 +1,4 @@
 using AutoMapper;
-using Business;
-using Data.Domain.Interfeces;
 using Data.Persistence;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -8,6 +6,7 @@ using Microsoft.AspNetCore.SpaServices.Webpack;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Presentation.Seeders;
 using Swashbuckle.AspNetCore.Swagger;
 
 namespace Presentation
@@ -33,9 +32,15 @@ namespace Presentation
             services.AddTransient<IDatabaseContext, DatabaseContext>();
             services.AddDbContext<DatabaseContext>(options => options.UseSqlServer(connection));
             
+            //Repositories
             services.AddRepositories();
 
+            //AutoMapper
             services.AddAutoMapper();
+
+            //Db Seeders
+            services.AddTransient<CountriesDbSeeder>();
+            services.AddTransient<CitiesDbSeeder>();
 
             // Register the Swagger generator, defining one or more Swagger documents
             services.AddSwaggerGen(c =>
@@ -45,7 +50,10 @@ namespace Presentation
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        public void Configure(IApplicationBuilder app, 
+            IHostingEnvironment env, 
+            CountriesDbSeeder countriesDbSeeder,
+            CitiesDbSeeder citiesDbSeeder)
         {
             // Enable middleware to serve generated Swagger as a JSON endpoint.
             app.UseSwagger();
@@ -82,6 +90,9 @@ namespace Presentation
                     name: "spa-fallback",
                     defaults: new { controller = "Home", action = "Index" });
             });
+
+            countriesDbSeeder.Seed();
+            citiesDbSeeder.Seed();
         }
     }
 }

@@ -4,6 +4,7 @@ using Data.Persistence;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using Microsoft.EntityFrameworkCore;
 
 namespace Business
 {
@@ -28,7 +29,9 @@ namespace Business
 
         public Country GetByName(string name)
         {
-            return _databaseContext.Countries.FirstOrDefault(t => t.Name.Equals(name));
+            return _databaseContext.Countries
+                .Include(c => c.Cities)
+                .FirstOrDefault(t => t.Name.Equals(name));
         }
     }
 }
