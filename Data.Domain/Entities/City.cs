@@ -15,5 +15,16 @@ namespace Data.Domain.Entities
         public List<User> Users { get; private set; }
         public List<Shop> Shops { get; private set; }
 
+        public static City Create(string name, Country country)
+        {
+            return new City
+            {
+                Id = new Guid(),
+                Name = name,
+                Country = country,
+                Users = new List<User>(),
+                Shops = new List<Shop>()
+            };
+        }
     }
 }
