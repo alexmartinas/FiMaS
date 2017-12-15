@@ -1,6 +1,4 @@
-﻿using Data.Domain.Entities;
-
-namespace Presentation.DTOs.UserModel
+﻿namespace Presentation.DTOs.UserModel
 {
     public class GetUserModel
     {

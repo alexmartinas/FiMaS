@@ -46,14 +46,14 @@ namespace Business
 
         public void Edit(Guid cityId, Shop shop)
         {
+            var city = _databaseContext.Cities.FirstOrDefault(c => c.Id == cityId);
             _databaseContext.Shops.Update(shop);
             _databaseContext.SaveChanges();
         }
 
         public void Delete(Guid cityId, Guid shopId)
         {
-            ICityRepository cityRepository = new CityRepository(_databaseContext);
-            var city = cityRepository.GetById(cityId);
+            var city = _databaseContext.Cities.FirstOrDefault(c => c.Id == cityId);
             var shop = GetById(shopId);
             city.Shops.Remove(shop);
         }

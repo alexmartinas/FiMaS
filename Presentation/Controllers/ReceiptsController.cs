@@ -2,7 +2,6 @@
 using Data.Domain.Interfeces;
 using Microsoft.AspNetCore.Mvc;
 using System;
-using System.Collections.Generic;
 
 namespace Presentation.Controllers
 {

@@ -1,6 +1,4 @@
-﻿using Data.Domain.Entities;
-
-namespace Presentation.DTOs
+﻿namespace Presentation.DTOs
 {
     public class UpdateUserModel
     {
