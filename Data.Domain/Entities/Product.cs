@@ -28,8 +28,10 @@ namespace Data.Domain.Entities
         [Required]
         public string Provider { get; private set; }
 
-        [Required]
         public Shop Shop { get; private set; }
+
+        [Required]
+        public double Quantity { get; private set; }
 
         public Receipt Receipt { get; private set; }
 

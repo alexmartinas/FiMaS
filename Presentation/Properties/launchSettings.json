@@ -1,0 +1,35 @@
+{
+  "iisSettings": {
+    "windowsAuthentication": false,
+    "anonymousAuthentication": true,
+    "iisExpress": {
+<<<<<<< HEAD
+      "applicationUrl": "http://localhost:53993/",
+=======
+      "applicationUrl": "http://localhost:53799/",
+>>>>>>> origin/miron
+      "sslPort": 0
+    }
+  },
+  "profiles": {
+    "IIS Express": {
+      "commandName": "IISExpress",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    },
+    "Presentation": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+<<<<<<< HEAD
+      "applicationUrl": "http://localhost:53994/"
+=======
+      "applicationUrl": "http://localhost:53823/"
+>>>>>>> origin/miron
+    }
+  }
+}

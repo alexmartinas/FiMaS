@@ -1,20 +1,23 @@
 ﻿using Data.Domain.Entities;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace Data.Domain.Interfeces
 {
-    interface IProductRepository
+    public interface IProductRepository
     {
-        IReadOnlyList<Product> getProductsByProvider(string provider);
-        IReadOnlyList<Product> getProductsByName(string name);
-        IReadOnlyList<Product> getProductsBoughtAt(DateTime date);
-        IReadOnlyList<Product> getProductsBoughtBetween(DateTime startDate, DateTime endDate);
-        IReadOnlyList<Product> getProductsByCategory(string category);
-        void updateProduct(Guid id, Product product);
-        void deleteProduct(Guid productId);
-        void addProduct(double price, string name, DateTime boughtAt, string provider, string category, double quantity, Guid ownerId);
+        IQueryable<Product> GetProducts();
+        IQueryable<Product> GetProductsByProvider(string provider);
+        IQueryable<Product> GetProductsByName(string name);
+        IQueryable<Product> GetProductsBoughtAt(DateTime date);
+        IQueryable<Product> GetProductsBoughtBetween(DateTime startDate, DateTime endDate);
+        IQueryable<Product> GetProductsByCategory(string category);
+        Product GetProductById(Guid productId);
+        void UpdateProduct(Product product);
+        void DeleteProduct(Guid productId);
+        Product AddProduct(Product product);
 
     }
 }

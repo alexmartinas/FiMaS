@@ -16,6 +16,11 @@ namespace Business
             _databaseContext = databaseContext;
         }
 
+        public IReadOnlyList<Country> GetAll()
+        {
+            return _databaseContext.Countries.ToList();
+        }
+
         public Country GetById(Guid id)
         {
             return _databaseContext.Countries.FirstOrDefault(t => t.Id == id);
@@ -23,12 +28,7 @@ namespace Business
 
         public Country GetByName(string name)
         {
-            return _databaseContext.Countries.FirstOrDefault(t => t.Name == name);
-        }
-
-        public IReadOnlyList<Country> GetAll()
-        {
-            return _databaseContext.Countries.ToList();
+            return _databaseContext.Countries.FirstOrDefault(t => t.Name.Equals(name));
         }
 
         public void Add(Country country)

@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using Data.Domain.Entities;
 
 namespace Presentation.DTOs
 {
@@ -13,10 +10,8 @@ namespace Presentation.DTOs
 
         public string Password { get; set; }
 
-        // TODO
-        // public Guid IdCountry { get; set; }
+        public string Country { get; set; }
 
-        // TODO
-        // public Guid IdCity { get; set; }
+        public string City { get; set; }
     }
 }
