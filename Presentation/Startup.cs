@@ -29,14 +29,13 @@ namespace Presentation
             //Connect to Sql
             var connection = @"Server = .\SQLEXPRESS; Database = FiMaS.DB; Trusted_Connection = true;";
 
-            services.AddDbContext<DatabaseContext>(options => options.UseSqlServer(connection));
+            //Database context
             services.AddTransient<IDatabaseContext, DatabaseContext>();
+            services.AddDbContext<DatabaseContext>(options => options.UseSqlServer(connection));
+            
+            services.AddRepositories();
+
             services.AddAutoMapper();
-            services.AddTransient<IUserRepository, UserRepository>();
-
-            services.AddTransient<IProductRepository, ProductRepository>();
-
-
 
             // Register the Swagger generator, defining one or more Swagger documents
             services.AddSwaggerGen(c =>
