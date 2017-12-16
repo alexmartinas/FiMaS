@@ -27,10 +27,14 @@ namespace Business
             return _databaseContext.Countries.FirstOrDefault(t => t.Id == id);
         }
 
+        public IReadOnlyList<City> GetCountryCities(string name)
+        {
+            return _databaseContext.Countries.FirstOrDefault(t => t.Name.Equals(name)).Cities;
+        }
+
         public Country GetByName(string name)
         {
             return _databaseContext.Countries
-                .Include(c => c.Cities)
                 .FirstOrDefault(t => t.Name.Equals(name));
         }
     }
