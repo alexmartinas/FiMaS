@@ -1,13 +1,17 @@
 ﻿using Data.Domain.Entities;
 using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace Data.Domain.Interfeces
 {
-    interface IShopRepository
+    public interface IShopRepository
     {
-        IReadOnlyList<Shop> getShopsByCity(Guid cityId);
-        IReadOnlyList<Shop> getShopsByUser(Guid cityId);
+        IReadOnlyList<Shop> GetShopsByCity(Guid cityId);
+        IReadOnlyList<Shop> GetShopsByUser(Guid userId);
+        IReadOnlyList<Shop> GetAllShops();
+        Shop GetById(Guid id);
+        void Add(Guid cityId, Shop shop);
+        void Edit(Guid cityId, Shop shop);
+        void Delete(Guid cityId, Guid shopId);
     }
 }

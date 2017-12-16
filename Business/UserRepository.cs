@@ -16,27 +16,27 @@ namespace Business
             _databaseContext = databaseContext;
         }
 
+        public List<User> GetAll()
+        {
+            return _databaseContext.Users.ToList();
+        }
+
         public void Add(User user)
         {
             _databaseContext.Users.Add(user);
             _databaseContext.SaveChanges();
         }
 
-        public User GetById(Guid id)
+        public User Get(Guid id)
         {
             return _databaseContext.Users.FirstOrDefault(t => t.Id == id);
         }
 
         public void Delete(Guid id)
         {
-            var user = GetById(id);
+            var user = Get(id);
             _databaseContext.Users.Remove(user);
             _databaseContext.SaveChanges();
-        }
-
-        public IReadOnlyList<User> GetAll()
-        {
-            return _databaseContext.Users.ToList();
         }
 
         public void Edit(User user)

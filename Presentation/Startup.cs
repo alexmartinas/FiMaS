@@ -1,3 +1,4 @@
+using AutoMapper;
 using Business;
 using Data.Domain.Interfeces;
 using Data.Persistence;
@@ -28,10 +29,13 @@ namespace Presentation
             //Connect to Sql
             var connection = @"Server = .\SQLEXPRESS; Database = FiMaS.DB; Trusted_Connection = true;";
 
-            services.AddDbContext<DatabaseContext>(options => options.UseSqlServer(connection));
+            //Database context
             services.AddTransient<IDatabaseContext, DatabaseContext>();
+            services.AddDbContext<DatabaseContext>(options => options.UseSqlServer(connection));
+            
+            services.AddRepositories();
 
-            services.AddTransient<IUserRepository, UserRepository>();
+            services.AddAutoMapper();
 
             // Register the Swagger generator, defining one or more Swagger documents
             services.AddSwaggerGen(c =>

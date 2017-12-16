@@ -32,10 +32,10 @@ namespace Data.Domain.Entities
 
         public List<Product> Products { get; private set; }
 
-        public static User Create(string name, string email, string password, Country idCountry, City idCity)
+        public static User Create(string name, string email, string password, Country country, City city)
         {
             var instance = new User { Id = Guid.NewGuid() };
-            instance.Update(name, email, password, idCountry, idCity);
+            instance.Update(name, email, password, country, city);
             return instance;
         }
 

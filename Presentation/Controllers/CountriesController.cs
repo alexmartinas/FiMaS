@@ -1,6 +1,6 @@
-﻿using Data.Domain.Entities;
-using Data.Domain.Interfeces;
+﻿using Data.Domain.Interfeces;
 using Microsoft.AspNetCore.Mvc;
+using Presentation.DTOs.CountryModel;
 using System;
 using System.Collections.Generic;
 
@@ -9,23 +9,40 @@ namespace Presentation.Controllers
     [Route("api/[controller]")]
     public class CountriesController : Controller
     {
-        private readonly ICountryRepository _repository;
+        private readonly ICountryRepository _countryRepository;
 
-        public CountriesController(ICountryRepository repository)
+        public CountriesController(ICountryRepository countryRepository)
         {
-            _repository = repository;
+            _countryRepository = countryRepository;
         }
 
         [HttpGet]
-        public IEnumerable<Country> Get()
+        public List<GetCountryModel> Get()
         {
-            return _repository.GetAll();
+            var entities = _countryRepository.GetAll();
+            var getCountriesModel = new List<GetCountryModel>();
+
+            foreach (var country in entities) {
+                var countryModel = new GetCountryModel
+                {
+                    Name = country.Name
+                };
+
+                getCountriesModel.Add(countryModel);
+            }
+
+            return getCountriesModel;
         }
 
         [HttpGet("{id:guid}")]
-        public Country Get(Guid id)
+        public GetCountryModel Get(Guid id)
         {
-            return _repository.GetById(id);
+            var entity = _countryRepository.GetById(id);
+            var countryModel = new GetCountryModel
+            {
+                Name = entity.Name
+            };
+            return countryModel;
         }
     }
 }
