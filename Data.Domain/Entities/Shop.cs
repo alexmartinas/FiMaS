@@ -16,6 +16,7 @@ namespace Data.Domain.Entities
 
         [Required]
         public Country Country { get; private set; }
+
         [Required]
         public City City { get; private set; }
 

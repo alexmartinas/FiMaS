@@ -2,34 +2,28 @@
   "iisSettings": {
     "windowsAuthentication": false,
     "anonymousAuthentication": true,
+    "iis": {
+      "applicationUrl": "http://localhost/Presentation",
+      "sslPort": 0
+    },
     "iisExpress": {
-<<<<<<< HEAD
-      "applicationUrl": "http://localhost:53993/",
-=======
-      "applicationUrl": "http://localhost:53799/",
->>>>>>> origin/miron
+      "applicationUrl": "http://localhost:57484/",
       "sslPort": 0
     }
   },
   "profiles": {
+    "Start": {
+      "commandName": "IISExpress",
+      "launchBrowser": true,
+      "ErrorString": "Invalid property identifier character: <. Path 'iisSettings.iisExpress', line 6, position 0."
+    },
     "IIS Express": {
       "commandName": "IISExpress",
       "launchBrowser": true,
+      "launchUrl": "http://localhost:57484/",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
-    },
-    "Presentation": {
-      "commandName": "Project",
-      "launchBrowser": true,
-      "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
-      },
-<<<<<<< HEAD
-      "applicationUrl": "http://localhost:53994/"
-=======
-      "applicationUrl": "http://localhost:53823/"
->>>>>>> origin/miron
     }
   }
 }

@@ -9,6 +9,5 @@ namespace Data.Domain.Interfeces
         IReadOnlyList<City> GetAll();
         City GetById(Guid id);
         City GetByName(string name);
-        void Add(City city);
     }
 }

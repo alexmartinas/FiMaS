@@ -1,15 +1,9 @@
 ﻿using Data.Domain.Entities;
-using System;
-using System.Collections.Generic;
 
 namespace Data.Domain.Interfeces
 {
-    public interface IUserRepository
+    public interface IUserRepository : IRepository<User>
     {
-        IReadOnlyList<User> GetAll();
-        User GetById(Guid id);
-        void Add(User user);
-        void Edit(User user);
-        void Delete(Guid id);
+
     }
 }

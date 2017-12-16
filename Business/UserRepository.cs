@@ -16,7 +16,7 @@ namespace Business
             _databaseContext = databaseContext;
         }
 
-        public IReadOnlyList<User> GetAll()
+        public List<User> GetAll()
         {
             return _databaseContext.Users.ToList();
         }
@@ -27,14 +27,14 @@ namespace Business
             _databaseContext.SaveChanges();
         }
 
-        public User GetById(Guid id)
+        public User Get(Guid id)
         {
             return _databaseContext.Users.FirstOrDefault(t => t.Id == id);
         }
 
         public void Delete(Guid id)
         {
-            var user = GetById(id);
+            var user = Get(id);
             _databaseContext.Users.Remove(user);
             _databaseContext.SaveChanges();
         }

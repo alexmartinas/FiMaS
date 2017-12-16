@@ -1,7 +1,5 @@
 ﻿using Data.Domain.Interfeces;
 using System;
-using System.Collections.Generic;
-using System.Text;
 using Data.Domain.Entities;
 using Data.Persistence;
 using Microsoft.Extensions.Logging;
