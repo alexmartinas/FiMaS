@@ -27,7 +27,23 @@ namespace Business
 
         public IReadOnlyList<Shop> GetShopsByUser(Guid userId)
         {
-            throw new NotImplementedException();
+            var user = _databaseContext
+                            .Users
+                            .Include(t => t.Receipts)
+                            .FirstOrDefault(t => t.UserId == userId);
+
+            var receipts = user.Receipts;
+
+            var products = new List<Product>();
+
+            foreach (var receipt in receipts)
+            {
+                products.AddRange(receipt.Products);
+            }
+
+            var shops = products.Select(t => t.Shop).ToList().AsReadOnly();
+
+            return shops;
         }
 
         public Shop Get(Guid id) => _databaseContext
