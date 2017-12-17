@@ -6,12 +6,15 @@ namespace Data.Domain.Entities
 {
     public class City
     {
-        public Guid Id { get; set; }
+        [Key]
+        public Guid CityId { get; private set; }
 
         [Required]
         public string Name { get; private set; }
 
+        public Guid CountryId { get; set; }
         public Country Country { get; private set; }
+
         public List<User> Users { get; private set; }
         public List<Shop> Shops { get; private set; }
 
@@ -19,7 +22,7 @@ namespace Data.Domain.Entities
         {
             return new City
             {
-                Id = new Guid(),
+                CityId = new Guid(),
                 Name = name,
                 Country = country,
                 Users = new List<User>(),

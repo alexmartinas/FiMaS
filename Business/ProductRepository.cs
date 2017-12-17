@@ -35,7 +35,7 @@ namespace Business
 
         public Product GetProductById(Guid productId)
         {
-            return _databaseContext.Products.FirstOrDefault(p => p.Id == productId);
+            return _databaseContext.Products.FirstOrDefault(p => p.ProductId == productId);
         }
 
         public IQueryable<Product> GetProductsBoughtAt(DateTime date)

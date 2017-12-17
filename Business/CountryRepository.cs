@@ -24,7 +24,7 @@ namespace Business
 
         public Country GetById(Guid id)
         {
-            return _databaseContext.Countries.FirstOrDefault(t => t.Id == id);
+            return _databaseContext.Countries.FirstOrDefault(t => t.CountryId == id);
         }
 
         public Country GetByName(string name)

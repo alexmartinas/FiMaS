@@ -23,7 +23,7 @@ namespace Business
 
         public City GetById(Guid id)
         {
-            return _databaseContext.Cities.FirstOrDefault(t => t.Id == id);
+            return _databaseContext.Cities.FirstOrDefault(t => t.CityId == id);
         }
 
         public City GetByName(string name)

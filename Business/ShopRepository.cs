@@ -18,7 +18,7 @@ namespace Business
 
         public IReadOnlyList<Shop> GetShopsByCity(Guid cityId)
         {
-            var city = _databaseContext.Cities.FirstOrDefault(c => c.Id == cityId);
+            var city = _databaseContext.Cities.FirstOrDefault(c => c.CityId == cityId);
             return city.Shops.AsReadOnly();
         }
         
@@ -34,28 +34,22 @@ namespace Business
 
         public Shop GetById(Guid shopId)
         {
-            return _databaseContext.Shops.FirstOrDefault(s => s.Id == shopId);
+            throw new NotImplementedException();
         }
 
         public void Add(Guid cityId, Shop shop)
         {
-            var city = _databaseContext.Cities.FirstOrDefault(c => c.Id == cityId);
-            city.Shops.Add(shop);
-            _databaseContext.SaveChanges();
+            throw new NotImplementedException();
         }
 
         public void Edit(Guid cityId, Shop shop)
         {
-            var city = _databaseContext.Cities.FirstOrDefault(c => c.Id == cityId);
-            _databaseContext.Shops.Update(shop);
-            _databaseContext.SaveChanges();
+            throw new NotImplementedException();
         }
 
         public void Delete(Guid cityId, Guid shopId)
         {
-            var city = _databaseContext.Cities.FirstOrDefault(c => c.Id == cityId);
-            var shop = GetById(shopId);
-            city.Shops.Remove(shop);
+            throw new NotImplementedException();
         }
     }
 }

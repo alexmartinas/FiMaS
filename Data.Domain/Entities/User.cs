@@ -7,45 +7,39 @@ namespace Data.Domain.Entities
     public class User
     {
         [Key]
-        public Guid Id { get; private set; }
+        public Guid UserId { get; private set; }
 
-        [Required]
-        [MinLength(3)]
-        [MaxLength(32)]
+        [Required, MinLength(3), MaxLength(32)]
         public string Name { get; private set; }
 
-        [Required]
-        [DataType(DataType.EmailAddress)]
-        [EmailAddress]
+        [Required, DataType(DataType.EmailAddress), EmailAddress]
         public string Email { get; private set; }
 
-        [Required]
-        [MinLength(8)]
-        [MaxLength(32)]
+        [Required, MinLength(8), MaxLength(32)]
         public string Password { get; private set; }
-
-        [Required]
-        public Country Country { get; private set; }
-
-        [Required]
+       
+        public Guid CityId { get; set; }
         public City City { get; private set; }
+        
+        public List<Receipt> Receipts { get; private set; }
 
-        public List<Product> Products { get; private set; }
-
-        public static User Create(string name, string email, string password, Country country, City city)
+        public static User Create(string name, string email, string password, City city)
         {
-            var instance = new User { Id = Guid.NewGuid() };
-            instance.Update(name, email, password, country, city);
+            var instance = new User
+            {
+                UserId = Guid.NewGuid(),
+                Receipts = new List<Receipt>()
+            };
+            instance.Update(name, email, password, city);
             return instance;
         }
 
-        public void Update(string name, string email, string password, Country country, City city)
+        public void Update(string name, string email, string password, City city)
         {
-            this.Name = name;
-            this.Email = email;
-            this.Password = password;
-            this.Country = country;
-            this.City = city;
+            Name = name;
+            Email = email;
+            Password = password;
+            City = city;
         }
     }
 }

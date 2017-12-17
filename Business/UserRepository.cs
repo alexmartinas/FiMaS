@@ -29,7 +29,7 @@ namespace Business
 
         public User Get(Guid id)
         {
-            return _databaseContext.Users.FirstOrDefault(t => t.Id == id);
+            return _databaseContext.Users.FirstOrDefault(t => t.UserId == id);
         }
 
         public void Delete(Guid id)

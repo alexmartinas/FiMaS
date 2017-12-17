@@ -44,9 +44,9 @@ namespace Business
         {
 
         }
-        public Receipt GetById(Guid Id)
+        public Receipt GetById(Guid id)
         {
-            return _databaseContext.Receipts.FirstOrDefault(t => t.Id == Id);
+            return _databaseContext.Receipts.FirstOrDefault(t => t.ReceiptId == id);
         }
     }
 }

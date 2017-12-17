@@ -10,16 +10,13 @@ namespace Presentation.Controllers
     public class UsersController : Controller
     {
         private readonly IUserRepository _userRepository;
-        private readonly ICountryRepository _countryRepository;
         private readonly ICityRepository _cityRepository;
 
         public UsersController (
             IUserRepository userRepository,
-            ICountryRepository countryRepository,
             ICityRepository cityRepository)
         {
             _userRepository = userRepository;
-            _countryRepository = countryRepository;
             _cityRepository = cityRepository;
         }
 
@@ -35,7 +32,7 @@ namespace Presentation.Controllers
                 {
                     Name = user.Name,
                     Email = user.Email,
-                    Country = user.Country.Name,
+                    Country = user.City.Country.Name,
                     City = user.City.Name
                 };
 
@@ -52,7 +49,7 @@ namespace Presentation.Controllers
             var getUserModel = new GetUserModel {
                 Name = entity.Name,
                 Email = entity.Email,
-                Country = entity.Country.Name,
+                Country = entity.City.Country.Name,
                 City = entity.City.Name
             };
 
@@ -62,10 +59,9 @@ namespace Presentation.Controllers
         [HttpPost]
         public void Post([FromBody]CreateUserModel user)
         {
-            var country = _countryRepository.GetByName(user.Country);
             var city = _cityRepository.GetByName(user.City);
 
-            var entity = Data.Domain.Entities.User.Create(user.Name, user.Email, user.Password, country, city);
+            var entity = Data.Domain.Entities.User.Create(user.Name, user.Email, user.Password, city);
             _userRepository.Add(entity);
         }
 
@@ -73,10 +69,9 @@ namespace Presentation.Controllers
         public void Put(Guid id, [FromBody]UpdateUserModel user)
         {
             var entity = _userRepository.Get(id);
-            var country = _countryRepository.GetByName(user.Country);
             var city = _cityRepository.GetByName(user.City);
 
-            entity.Update(user.Name, user.Email, user.Password, country, city);
+            entity.Update(user.Name, user.Email, user.Password, city);
             _userRepository.Edit(entity);
         }
 
