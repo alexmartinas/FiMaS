@@ -20,7 +20,6 @@ namespace Data.Domain.Entities
 
         public List<Product> Products { get; private set; }
 
-
         public static Shop Create(string name, Guid cityId, string address)
         {
             return new Shop
@@ -31,6 +30,13 @@ namespace Data.Domain.Entities
                 Address = address,
                 Products = new List<Product>()
             };
+        }
+
+        public void Update(string name, Guid cityId, string address)
+        {
+            Name = name;
+            CityId = cityId;
+            Address = address;
         }
     }
 }

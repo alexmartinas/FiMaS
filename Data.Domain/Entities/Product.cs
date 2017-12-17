@@ -48,5 +48,18 @@ namespace Data.Domain.Entities
                 ReceiptId = receiptId
             };
         }
+
+        public void Update(string name, string category, double price, DateTime boughtAt, string provider,
+            double quantity, Guid shopId, Guid receiptId)
+        {
+            Name = name;
+            Category = category;
+            Price = price;
+            BoughtAt = boughtAt;
+            Provider = provider;
+            Quantity = quantity;
+            ShopId = shopId;
+            ReceiptId = receiptId;
+        }
     }
 }

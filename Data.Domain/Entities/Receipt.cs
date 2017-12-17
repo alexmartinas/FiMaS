@@ -28,5 +28,11 @@ namespace Data.Domain.Entities
             };
         }
 
+        public void Update(Guid userId, DateTime printedAt)
+        {
+            UserId = userId;
+            PrintedAt = printedAt;
+        }
+
     }
 }
