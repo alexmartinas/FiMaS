@@ -16,26 +16,23 @@ namespace Business
             _databaseContext = databaseContext; 
         }
 
-        public IReadOnlyList<Shop> GetShopsByCity(Guid cityId)
-        {
-            var city = _databaseContext.Cities.FirstOrDefault(c => c.CityId == cityId);
-            return city.Shops.AsReadOnly();
-        }
-        
+        public IReadOnlyList<Shop> GetShopsByCity(Guid cityId) => _databaseContext
+                .Cities
+                .FirstOrDefault(c => c.CityId == cityId)
+                .Shops;
+
         public IReadOnlyList<Shop> GetShopsByUser(Guid userId)
         {
             throw new NotImplementedException();
         }
 
-        public IReadOnlyList<Shop> GetAllShops()
-        {
-            return _databaseContext.Shops.ToList().AsReadOnly();
-        }
+        public IReadOnlyList<Shop> GetAllShops() => _databaseContext
+                .Shops
+                .ToList();
 
-        public Shop GetById(Guid shopId)
-        {
-            throw new NotImplementedException();
-        }
+        public Shop GetById(Guid shopId) => _databaseContext
+                .Shops
+                .FirstOrDefault(t => t.ShopId == shopId);
 
         public void Add(Guid cityId, Shop shop)
         {

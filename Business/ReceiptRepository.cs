@@ -16,14 +16,14 @@ namespace Business
             _databaseContext = databaseContext;
         }
 
-        public  IReadOnlyList<Receipt> GetReceiptsByOwner(Guid ownerId)
-        {
-            return _databaseContext.Receipts.ToList();
-        }
-        public IReadOnlyList<Receipt> GetReceiptsByPrintedDate(Guid ownerId, DateTime date)
-        {
-            return _databaseContext.Receipts.ToList();
-        }
+        public IReadOnlyList<Receipt> GetReceiptsByOwner(Guid ownerId) => _databaseContext
+                .Receipts
+                .ToList();
+
+        public IReadOnlyList<Receipt> GetReceiptsByPrintedDate(Guid ownerId, DateTime date) => _databaseContext
+                .Receipts
+                .ToList();
+
         public void EditRecceipt(Guid id, Receipt receipt)
         {
 
@@ -44,9 +44,8 @@ namespace Business
         {
 
         }
-        public Receipt GetById(Guid id)
-        {
-            return _databaseContext.Receipts.FirstOrDefault(t => t.ReceiptId == id);
-        }
+        public Receipt GetById(Guid id) => _databaseContext
+                .Receipts
+                .FirstOrDefault(t => t.ReceiptId == id);
     }
 }

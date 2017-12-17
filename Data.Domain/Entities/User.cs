@@ -18,28 +18,28 @@ namespace Data.Domain.Entities
         [Required, MinLength(8), MaxLength(32)]
         public string Password { get; private set; }
        
-        public Guid CityId { get; set; }
-        public City City { get; private set; }
+        public Guid CityId { get; private set; }
+        public City City { get; set; }
         
         public List<Receipt> Receipts { get; private set; }
 
-        public static User Create(string name, string email, string password, City city)
+        public static User Create(string name, string email, string password, Guid cityId)
         {
             var instance = new User
             {
                 UserId = Guid.NewGuid(),
                 Receipts = new List<Receipt>()
             };
-            instance.Update(name, email, password, city);
+            instance.Update(name, email, password, cityId);
             return instance;
         }
 
-        public void Update(string name, string email, string password, City city)
+        public void Update(string name, string email, string password, Guid cityId)
         {
             Name = name;
             Email = email;
             Password = password;
-            City = city;
+            CityId = cityId;
         }
     }
 }

@@ -18,13 +18,13 @@ namespace Data.Domain.Entities
         public List<User> Users { get; private set; }
         public List<Shop> Shops { get; private set; }
 
-        public static City Create(string name, Country country)
+        public static City Create(string name, Guid countryId)
         {
             return new City
             {
                 CityId = new Guid(),
                 Name = name,
-                Country = country,
+                CountryId = countryId,
                 Users = new List<User>(),
                 Shops = new List<Shop>()
             };

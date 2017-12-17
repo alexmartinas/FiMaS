@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using Presentation.DTOs.UserModel;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Presentation.Controllers
 {
@@ -24,22 +25,15 @@ namespace Presentation.Controllers
         public List<GetUserModel> Get()
         {
             var entities = _userRepository.GetAll();
-            var getUsersModel = new List<GetUserModel>();
 
-            foreach (var user in entities)
-            {
-                var userModel = new GetUserModel
+            return entities.Select(user => new GetUserModel
                 {
                     Name = user.Name,
                     Email = user.Email,
                     Country = user.City.Country.Name,
                     City = user.City.Name
-                };
-
-                getUsersModel.Add(userModel);
-            }
-
-            return getUsersModel;
+                })
+                .ToList();
         }
 
         [HttpGet("{id:guid}")]
@@ -61,7 +55,7 @@ namespace Presentation.Controllers
         {
             var city = _cityRepository.GetByName(user.City);
 
-            var entity = Data.Domain.Entities.User.Create(user.Name, user.Email, user.Password, city);
+            var entity = Data.Domain.Entities.User.Create(user.Name, user.Email, user.Password, city.CityId);
             _userRepository.Add(entity);
         }
 
@@ -70,8 +64,8 @@ namespace Presentation.Controllers
         {
             var entity = _userRepository.Get(id);
             var city = _cityRepository.GetByName(user.City);
-
-            entity.Update(user.Name, user.Email, user.Password, city);
+           
+            entity.Update(user.Name, user.Email, user.Password, city.CityId);
             _userRepository.Edit(entity);
         }
 

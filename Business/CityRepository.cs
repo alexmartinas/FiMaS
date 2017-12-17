@@ -4,6 +4,7 @@ using Data.Persistence;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using Microsoft.EntityFrameworkCore;
 
 namespace Business
 {
@@ -11,24 +12,18 @@ namespace Business
     {
         private readonly IDatabaseContext _databaseContext;
 
-        public CityRepository(IDatabaseContext databaseContext)
-        {
-            _databaseContext = databaseContext;
-        }
+        public CityRepository(IDatabaseContext databaseContext) => _databaseContext = databaseContext;
 
-        public IReadOnlyList<City> GetAll()
-        {
-            return _databaseContext.Cities.ToList();
-        }
+        public IReadOnlyList<City> GetAll() => _databaseContext
+                        .Cities
+                        .ToList();
 
-        public City GetById(Guid id)
-        {
-            return _databaseContext.Cities.FirstOrDefault(t => t.CityId == id);
-        }
+        public City GetById(Guid id) => _databaseContext
+                        .Cities
+                        .FirstOrDefault(t => t.CityId == id);
 
-        public City GetByName(string name)
-        {
-            return _databaseContext.Cities.FirstOrDefault(t => t.Name.Equals(name));
-        }
+        public City GetByName(string name) => _databaseContext
+                        .Cities
+                        .FirstOrDefault(t => t.Name.Equals(name));
     }
 }

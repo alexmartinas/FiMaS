@@ -1,9 +1,11 @@
 ﻿using System.Linq;
 using Data.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.ChangeTracking;
 
 namespace Data.Persistence
 {
+
     public sealed class DatabaseContext : DbContext, IDatabaseContext
     {
         public DatabaseContext(DbContextOptions options) : base(options)

@@ -15,19 +15,19 @@ namespace Data.Domain.Entities
         [Required]
         public string Address { get; private set; }
 
-        public Guid CityId { get; set; }
-        public City City { get; private set; }
+        public Guid CityId { get; private set; }
+        public City City { get; set; }
 
         public List<Product> Products { get; private set; }
 
 
-        public static Shop Create(string name, City city, string address)
+        public static Shop Create(string name, Guid cityId, string address)
         {
             return new Shop
             {
                 ShopId = new Guid(),
                 Name = name,
-                City = city,
+                CityId = cityId,
                 Address = address,
                 Products = new List<Product>()
             };

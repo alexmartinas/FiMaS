@@ -17,12 +17,12 @@ namespace Data.Domain.Entities
         
         public List<Product> Products { get; private set; }
 
-        public static Receipt Create(User user, DateTime printedAt)
+        public static Receipt Create(Guid userId, DateTime printedAt)
         {
             return new Receipt
             {
                 ReceiptId = new Guid(),
-                User = user,
+                UserId = userId,
                 PrintedAt = printedAt,
                 Products = new List<Product>()
             };
