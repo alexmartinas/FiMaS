@@ -59,7 +59,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "860840338cef803fd727"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "8d2710352536fbe2d2de"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
@@ -8103,18 +8103,11 @@ var __extends = (this && this.__extends) || (function () {
 })();
 
 
-var User = (function () {
-    function User() {
-    }
-    return User;
-}());
 var Register = (function (_super) {
     __extends(Register, _super);
     function Register() {
         var _this = _super.call(this) || this;
-        var user = new User();
         _this.state = {
-            user: user,
             countries: [],
             cities: [],
             name: "",
@@ -8157,11 +8150,6 @@ var Register = (function (_super) {
         var _a;
     };
     Register.prototype.onSubmit = function () {
-        this.state.user.name = this.state.name;
-        this.state.user.password = this.state.password;
-        this.state.user.email = this.state.email;
-        this.state.user.country = this.state.country;
-        this.state.user.city = this.state.city;
         fetch('api/users', {
             method: 'POST',
             headers: {
@@ -8169,7 +8157,10 @@ var Register = (function (_super) {
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify({
-                User: this.state.user
+                "name": this.state.name,
+                "password": this.state.password,
+                "email": this.state.email,
+                "city": this.state.city
             })
         });
     };
@@ -8177,15 +8168,15 @@ var Register = (function (_super) {
         return (__WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("form", null,
             __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("label", { htmlFor: "name" }, "Enter your name"),
             __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("br", null),
-            __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("input", { value: this.state.user.name, onChange: this.onChange, name: "name", type: "text" }),
+            __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("input", { value: this.state.name, onChange: this.onChange, name: "name", type: "text" }),
             __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("br", null),
             __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("label", { htmlFor: "password" }, "Enter your password"),
             __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("br", null),
-            __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("input", { value: this.state.user.password, onChange: this.onChange, name: "password", type: "password" }),
+            __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("input", { value: this.state.password, onChange: this.onChange, name: "password", type: "password" }),
             __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("br", null),
             __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("label", { htmlFor: "email" }, "Enter your email"),
             __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("br", null),
-            __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("input", { value: this.state.user.email, onChange: this.onChange, name: "email", type: "email" }),
+            __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("input", { value: this.state.email, onChange: this.onChange, name: "email", type: "email" }),
             __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("br", null),
             __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("label", { htmlFor: "country" }, "Select your country"),
             __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("br", null),
@@ -8198,14 +8189,14 @@ var Register = (function (_super) {
             __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("button", { onClick: this.onSubmit }, "Register")));
     };
     Register.prototype.renderCountries = function () {
-        return (__WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("select", { defaultValue: "country", name: "country", onChange: this.getCitiesByCountry, value: this.state.user.country },
+        return (__WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("select", { defaultValue: "country", name: "country", onChange: this.getCitiesByCountry, value: this.state.country },
             __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("option", { value: "country", disabled: true }, "Country"),
             this.state.countries.map(function (country) {
                 return __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("option", { key: country.name, name: "country", value: country.name }, country.name);
             })));
     };
     Register.prototype.renderCities = function () {
-        return (__WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("select", { defaultValue: "city", name: "city", value: this.state.user.city, onChange: this.onChange },
+        return (__WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("select", { defaultValue: "city", name: "city", value: this.state.city, onChange: this.onChange },
             __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("option", { value: "city", disabled: true }, "City"),
             this.state.cities.map(function (city) {
                 return __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("option", { key: city.name, value: city.name }, city.name);

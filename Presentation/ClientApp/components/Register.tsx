@@ -10,18 +10,10 @@ interface ICity {
     name: string;
 }
 
-class User {
-    name: string;
-    password: string;
-    email: string;
-    city: string;
-    country: string;
-}
-
 interface IRegister {
-    user: User;
     countries: ICountry[];
     cities: ICity[];
+
     name: string;
     password: string;
     email: string;
@@ -32,11 +24,10 @@ interface IRegister {
 export class Register extends React.Component<RouteComponentProps<{}>, IRegister> {
     constructor() {
         super();
-        let user = new User();
         this.state = {
-            user: user,
             countries: [],
             cities: [],
+
             name: "",
             password: "",
             email: "",
@@ -83,12 +74,6 @@ export class Register extends React.Component<RouteComponentProps<{}>, IRegister
     }
 
     private onSubmit() {
-        this.state.user.name = this.state.name;
-        this.state.user.password = this.state.password;
-        this.state.user.email = this.state.email;
-        this.state.user.country = this.state.country;
-        this.state.user.city = this.state.city;
-
         fetch('api/users', {
             method: 'POST',
             headers: {
@@ -96,7 +81,10 @@ export class Register extends React.Component<RouteComponentProps<{}>, IRegister
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify({
-                User: this.state.user
+                "name": this.state.name,
+                "password": this.state.password,
+                "email": this.state.email,
+                "city": this.state.city
             })
         })
     }
@@ -107,7 +95,7 @@ export class Register extends React.Component<RouteComponentProps<{}>, IRegister
                 <label htmlFor="name">Enter your name</label>
                 <br />
                 <input
-                    value={this.state.user.name}
+                    value={this.state.name}
                     onChange={this.onChange}
                     name="name"
                     type="text" />
@@ -115,7 +103,7 @@ export class Register extends React.Component<RouteComponentProps<{}>, IRegister
                 <label htmlFor="password">Enter your password</label>
                 <br />
                 <input
-                    value={this.state.user.password}
+                    value={this.state.password}
                     onChange={this.onChange}
                     name="password"
                     type="password" />
@@ -123,7 +111,7 @@ export class Register extends React.Component<RouteComponentProps<{}>, IRegister
                 <label htmlFor="email">Enter your email</label>
                 <br />
                 <input
-                    value={this.state.user.email}
+                    value={this.state.email}
                     onChange={this.onChange}
                     name="email"
                     type="email" />
@@ -151,7 +139,7 @@ export class Register extends React.Component<RouteComponentProps<{}>, IRegister
                 defaultValue="country"
                 name="country"
                 onChange={this.getCitiesByCountry}
-                value={this.state.user.country}>
+                value={this.state.country}>
                 <option value="country" disabled>Country</option>
                 {
                     this.state.countries.map(country =>
@@ -171,7 +159,7 @@ export class Register extends React.Component<RouteComponentProps<{}>, IRegister
             <select
                 defaultValue="city"
                 name="city"
-                value={this.state.user.city}
+                value={this.state.city}
                 onChange={this.onChange}>
                 <option value="city" disabled>City</option>
                 {
