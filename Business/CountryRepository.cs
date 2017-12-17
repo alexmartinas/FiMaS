@@ -21,7 +21,7 @@ namespace Business
         public Country GetById(Guid id) => _databaseContext
                     .Countries
                     .FirstOrDefault(t => t.CountryId == id);
-
+        
         public Country GetByName(string name) => _databaseContext
                     .Countries
                     .Include(c => c.Cities)

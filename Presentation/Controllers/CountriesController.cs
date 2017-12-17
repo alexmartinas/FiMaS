@@ -1,5 +1,6 @@
 ﻿using Data.Domain.Interfeces;
 using Microsoft.AspNetCore.Mvc;
+using Presentation.DTOs.CityModel;
 using Presentation.DTOs.CountryModel;
 using System;
 using System.Collections.Generic;
@@ -32,6 +33,22 @@ namespace Presentation.Controllers
             }
 
             return getCountriesModel;
+        }
+        [HttpGet("cities")]
+        public List<GetCityModel> GetCities(string name)
+        {
+            var cities = _countryRepository.GetCountryCities(name);
+            var getCitiesModel = new List<GetCityModel>();
+            foreach (var city in cities)
+            {
+                var cityModel = new GetCityModel
+                {
+                    Name = city.Name
+                };
+
+                getCitiesModel.Add(cityModel);
+            }
+            return getCitiesModel ;
         }
 
         [HttpGet("{id:guid}")]
