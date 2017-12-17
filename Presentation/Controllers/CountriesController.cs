@@ -1,6 +1,5 @@
 ﻿using Data.Domain.Interfeces;
 using Microsoft.AspNetCore.Mvc;
-using Presentation.DTOs.CityModel;
 using Presentation.DTOs.CountryModel;
 using System;
 using System.Collections.Generic;

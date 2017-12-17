@@ -24,6 +24,7 @@ namespace Business
 
         public City GetByName(string name) => _databaseContext
                         .Cities
+                        .Include(t => t.Shops)
                         .FirstOrDefault(t => t.Name.Equals(name));
     }
 }

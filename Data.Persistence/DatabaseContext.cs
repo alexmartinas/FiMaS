@@ -1,7 +1,6 @@
 ﻿using System.Linq;
 using Data.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.ChangeTracking;
 
 namespace Data.Persistence
 {
