@@ -25,12 +25,11 @@ namespace Presentation
         {
             services.AddMvc();
 
-            //Connect to Sql
-            var connection = @"Server = .\SQLEXPRESS; Database = FiMaS.DB; Trusted_Connection = true;";
-
             //Database context
             services.AddTransient<IDatabaseContext, DatabaseContext>();
-            services.AddDbContext<DatabaseContext>(options => options.UseSqlServer(connection));
+            services.AddDbContext<DatabaseContext>(options => 
+                    options.UseSqlServer(Configuration
+                        .GetConnectionString("DatabaseConnectionString")));
             
             //Repositories
             services.AddRepositories();
