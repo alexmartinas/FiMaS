@@ -4,6 +4,7 @@ using System.Linq;
 using Data.Domain.Entities;
 using Data.Domain.Interfeces;
 using Data.Persistence;
+using Microsoft.EntityFrameworkCore;
 
 namespace Business
 {
@@ -16,46 +17,66 @@ namespace Business
             _databaseContext = databaseContext; 
         }
 
-        public IReadOnlyList<Shop> GetShopsByCity(Guid cityId)
-        {
-            var city = _databaseContext.Cities.FirstOrDefault(c => c.Id == cityId);
-            return city.Shops.AsReadOnly();
-        }
-        
+        public IReadOnlyList<Shop> GetShopsByCity(string city) => _databaseContext
+                .Cities
+                .Include(t => t.Shops)
+                    .ThenInclude(t => t.City)
+                        .ThenInclude(t => t.Country)
+                .FirstOrDefault(c => c.Name == city)
+                .Shops;
+
         public IReadOnlyList<Shop> GetShopsByUser(Guid userId)
         {
-            throw new NotImplementedException();
+            var user = _databaseContext
+                            .Users
+                            .Include(t => t.Receipts)
+                            .FirstOrDefault(t => t.UserId == userId);
+
+            var receipts = user.Receipts;
+
+            var products = new List<Product>();
+
+            foreach (var receipt in receipts)
+            {
+                products.AddRange(receipt.Products);
+            }
+
+            var shops = products.Select(t => t.Shop).ToList().AsReadOnly();
+
+            return shops;
         }
 
-        public IReadOnlyList<Shop> GetAllShops()
-        {
-            return _databaseContext.Shops.ToList().AsReadOnly();
-        }
+        public Shop Get(Guid id) => _databaseContext
+                .Shops
+                .Include(t => t.City)
+                    .ThenInclude(t => t.Country)
+                .FirstOrDefault(t => t.ShopId == id);
 
-        public Shop GetById(Guid shopId)
-        {
-            return _databaseContext.Shops.FirstOrDefault(s => s.Id == shopId);
-        }
+        public List<Shop> GetAll() => _databaseContext
+                .Shops
+                .Include(t => t.City)
+                    .ThenInclude(t => t.Country)
+                .ToList();
 
-        public void Add(Guid cityId, Shop shop)
+
+        public void Add(Shop entity)
         {
-            var city = _databaseContext.Cities.FirstOrDefault(c => c.Id == cityId);
-            city.Shops.Add(shop);
+            _databaseContext.Shops.Add(entity);
             _databaseContext.SaveChanges();
         }
 
-        public void Edit(Guid cityId, Shop shop)
+        public void Edit(Shop entity)
         {
-            var city = _databaseContext.Cities.FirstOrDefault(c => c.Id == cityId);
-            _databaseContext.Shops.Update(shop);
+            _databaseContext.Shops.Update(entity);
             _databaseContext.SaveChanges();
         }
 
-        public void Delete(Guid cityId, Guid shopId)
+        public void Delete(Guid id)
         {
-            var city = _databaseContext.Cities.FirstOrDefault(c => c.Id == cityId);
-            var shop = GetById(shopId);
-            city.Shops.Remove(shop);
+            var shop = Get(id);
+            if (shop == null) return;
+            _databaseContext.Shops.Remove(shop);
+            _databaseContext.SaveChanges();
         }
     }
 }

@@ -13,6 +13,7 @@ namespace Data.Persistence
         DbSet<Country> Countries { get; set; }
         DbSet<Shop> Shops { get; set; }
         DatabaseFacade Database { get; }
+
         int SaveChanges();
     }
 }

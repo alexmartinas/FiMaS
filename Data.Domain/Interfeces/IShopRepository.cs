@@ -4,14 +4,9 @@ using System.Collections.Generic;
 
 namespace Data.Domain.Interfeces
 {
-    public interface IShopRepository
+    public interface IShopRepository : IRepository<Shop>
     {
-        IReadOnlyList<Shop> GetShopsByCity(Guid cityId);
+        IReadOnlyList<Shop> GetShopsByCity(string city);
         IReadOnlyList<Shop> GetShopsByUser(Guid userId);
-        IReadOnlyList<Shop> GetAllShops();
-        Shop GetById(Guid id);
-        void Add(Guid cityId, Shop shop);
-        void Edit(Guid cityId, Shop shop);
-        void Delete(Guid cityId, Guid shopId);
     }
 }
