@@ -4,6 +4,7 @@ using Data.Persistence;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using Microsoft.EntityFrameworkCore;
 
 namespace Business
 {
@@ -18,7 +19,11 @@ namespace Business
 
         public List<User> GetAll()
         {
-            return _databaseContext.Users.ToList();
+            return _databaseContext
+                        .Users
+                        .Include(t => t.City)
+                            .ThenInclude(t => t.Country)
+                        .ToList();
         }
 
         public void Add(User user)
@@ -29,12 +34,17 @@ namespace Business
 
         public User Get(Guid id)
         {
-            return _databaseContext.Users.FirstOrDefault(t => t.Id == id);
+            return _databaseContext
+                        .Users
+                        .Include(t => t.City)
+                            .ThenInclude(t => t.Country)
+                        .FirstOrDefault(t => t.UserId == id);
         }
 
         public void Delete(Guid id)
         {
             var user = Get(id);
+            if (user == null) return;
             _databaseContext.Users.Remove(user);
             _databaseContext.SaveChanges();
         }

@@ -7,17 +7,26 @@ namespace Data.Domain.Entities
     public class Receipt
     {
         [Key]
-        public Guid Id { get; private set; }
+        public Guid ReceiptId { get; private set; }
 
-        [Required]
+        public Guid UserId { get; set; }
         public User User { get; private set; }
-
-        [Required]
+        
+        [Required, DataType(DataType.DateTime)]
+        public DateTime PrintedAt { get; private set; }
+        
         public List<Product> Products { get; private set; }
 
-        [Required]
-        [DataType(DataType.DateTime)]
-        public DateTime PrintedAt { get; private set; } 
+        public static Receipt Create(Guid userId, DateTime printedAt)
+        {
+            return new Receipt
+            {
+                ReceiptId = new Guid(),
+                UserId = userId,
+                PrintedAt = printedAt,
+                Products = new List<Product>()
+            };
+        }
 
     }
 }

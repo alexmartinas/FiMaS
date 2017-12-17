@@ -12,26 +12,19 @@ namespace Business
     {
         private readonly IDatabaseContext _databaseContext;
 
-        public CountryRepository(IDatabaseContext databaseContext)
-        {
-            _databaseContext = databaseContext;
-        }
+        public CountryRepository(IDatabaseContext databaseContext) => _databaseContext = databaseContext;
 
-        public IReadOnlyList<Country> GetAll()
-        {
-            return _databaseContext.Countries.ToList();
-        }
+        public IReadOnlyList<Country> GetAll() => _databaseContext
+                    .Countries
+                    .ToList();
 
-        public Country GetById(Guid id)
-        {
-            return _databaseContext.Countries.FirstOrDefault(t => t.Id == id);
-        }
+        public Country GetById(Guid id) => _databaseContext
+                    .Countries
+                    .FirstOrDefault(t => t.CountryId == id);
 
-        public Country GetByName(string name)
-        {
-            return _databaseContext.Countries
-                .Include(c => c.Cities)
-                .FirstOrDefault(t => t.Name.Equals(name));
-        }
+        public Country GetByName(string name) => _databaseContext
+                    .Countries
+                    .Include(c => c.Cities)
+                    .FirstOrDefault(t => t.Name.Equals(name));
     }
 }

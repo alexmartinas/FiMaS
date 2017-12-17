@@ -22,7 +22,6 @@ namespace Business
         {
             _databaseContext.Products.Add(product);
             _databaseContext.SaveChanges();
-
             return product;
         }
 
@@ -33,40 +32,32 @@ namespace Business
             _databaseContext.SaveChanges();
         }
 
-        public Product GetProductById(Guid productId)
-        {
-            return _databaseContext.Products.FirstOrDefault(p => p.Id == productId);
-        }
+        public Product GetProductById(Guid productId) => _databaseContext
+                    .Products
+                    .FirstOrDefault(p => p.ProductId == productId);
 
-        public IQueryable<Product> GetProductsBoughtAt(DateTime date)
-        {
-            return _databaseContext.Products.Where(p => p.BoughtAt == date);
-        }
+        public IQueryable<Product> GetProductsBoughtAt(DateTime date) => _databaseContext
+                    .Products
+                    .Where(p => p.BoughtAt == date);
 
-        public IQueryable<Product> GetProductsBoughtBetween(DateTime startDate, DateTime endDate)
-        {
-            return _databaseContext.Products.Where(p => p.BoughtAt >= startDate && p.BoughtAt <= endDate);
-        }
+        public IQueryable<Product> GetProductsBoughtBetween(DateTime startDate, DateTime endDate) => _databaseContext
+                    .Products
+                    .Where(p => p.BoughtAt >= startDate && p.BoughtAt <= endDate);
 
-        public IQueryable<Product> GetProductsByCategory(string category)
-        {
-            return _databaseContext.Products.Where(p => p.Category == category);
-        }
+        public IQueryable<Product> GetProductsByCategory(string category) => _databaseContext
+                    .Products
+                    .Where(p => p.Category == category);
 
-        public IQueryable<Product> GetProductsByName(string name)
-        {
-            return _databaseContext.Products.Where(p => p.Name == name);
-        }
+        public IQueryable<Product> GetProductsByName(string name) => _databaseContext
+                    .Products
+                    .Where(p => p.Name == name);
 
-        public IQueryable<Product> GetProductsByProvider(string provider)
-        {
-            return _databaseContext.Products.Where(p => p.Provider == provider);
-        }
+        public IQueryable<Product> GetProductsByProvider(string provider) => _databaseContext
+                    .Products
+                    .Where(p => p.Provider == provider);
 
-        public IQueryable<Product> GetProducts()
-        {
-            return _databaseContext.Products;
-        }
+        public IQueryable<Product> GetProducts() => _databaseContext
+                    .Products;
 
         public void UpdateProduct(Product product)
         {

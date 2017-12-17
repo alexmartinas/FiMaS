@@ -6,22 +6,25 @@ namespace Data.Domain.Entities
 {
     public class City
     {
-        public Guid Id { get; set; }
+        [Key]
+        public Guid CityId { get; private set; }
 
         [Required]
         public string Name { get; private set; }
 
+        public Guid CountryId { get; set; }
         public Country Country { get; private set; }
+
         public List<User> Users { get; private set; }
         public List<Shop> Shops { get; private set; }
 
-        public static City Create(string name, Country country)
+        public static City Create(string name, Guid countryId)
         {
             return new City
             {
-                Id = new Guid(),
+                CityId = new Guid(),
                 Name = name,
-                Country = country,
+                CountryId = countryId,
                 Users = new List<User>(),
                 Shops = new List<Shop>()
             };
