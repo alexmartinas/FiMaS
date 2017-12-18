@@ -4,6 +4,7 @@ using Presentation.DTOs.UserModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using Presentation.DTOs.ShopModels;
 
 namespace Presentation.Controllers
 {
@@ -12,13 +13,16 @@ namespace Presentation.Controllers
     {
         private readonly IUserRepository _userRepository;
         private readonly ICityRepository _cityRepository;
+        private readonly IShopRepository _shopRepository;
 
         public UsersController (
             IUserRepository userRepository,
-            ICityRepository cityRepository)
+            ICityRepository cityRepository, 
+            IShopRepository shopRepository)
         {
             _userRepository = userRepository;
             _cityRepository = cityRepository;
+            _shopRepository = shopRepository;
         }
 
         [HttpGet]
@@ -48,6 +52,23 @@ namespace Presentation.Controllers
             };
 
             return getUserModel;
+        }
+        
+        [HttpGet("{id}/shops")]
+        public IActionResult GetShops(Guid id)
+        {
+            if (_userRepository.Get(id) == null) return BadRequest();
+            var shops = _shopRepository.GetShopsByUser(id);
+
+            var shopsList = shops.Select(s => new GetShopModel
+                {
+                    Name = s.Name,
+                    Address = s.Address,
+                    Country = s.City.Country.Name,
+                    City = s.City.Name
+                })
+                .ToList();
+            return Ok(shopsList);
         }
 
         [HttpPost]
