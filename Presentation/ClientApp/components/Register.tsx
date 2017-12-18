@@ -76,7 +76,6 @@ export class Register extends React.Component<RouteComponentProps<{}>, IRegister
         this.setState({
             [e.target.name]: e.target.value
         });
-        console.log(this.state.errors);
     }
 
     private checkInput() {
@@ -100,29 +99,26 @@ export class Register extends React.Component<RouteComponentProps<{}>, IRegister
     }
 
     private onSubmit() {
+        /*
         this.setState({
             errors: ""
         });
         this.checkInput();
+        */
 
-        if (this.state.errors.length != 0) {
-            fetch('api/users', {
-                method: 'POST',
-                headers: {
-                    'Accept': 'application/json',
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({
-                    "name": this.state.name,
-                    "password": this.state.password,
-                    "email": this.state.email,
-                    "city": this.state.city
-                })
+        fetch('api/users', {
+            method: 'POST',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                "name": this.state.name,
+                "password": this.state.password,
+                "email": this.state.email,
+                "city": this.state.city
             })
-        }
-        else {
-            this.render();
-        }
+        })
     }
 
     public render() {

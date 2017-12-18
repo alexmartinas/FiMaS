@@ -59,7 +59,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "083554966519ef192f62"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "656b4377e63938f4b422"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
@@ -1260,7 +1260,7 @@ var routes = __WEBPACK_IMPORTED_MODULE_0_react__["createElement"](__WEBPACK_IMPO
     __WEBPACK_IMPORTED_MODULE_0_react__["createElement"](__WEBPACK_IMPORTED_MODULE_1_react_router_dom__["Route"], { path: '/register', component: __WEBPACK_IMPORTED_MODULE_6__components_Register__["a" /* Register */] }));
 
 
- ;(function register() { /* react-hot-loader/webpack */ if (process.env.NODE_ENV !== 'production') { if (typeof __REACT_HOT_LOADER__ === 'undefined') { return; } if (typeof module.exports === 'function') { __REACT_HOT_LOADER__.register(module.exports, 'module.exports', "C:\\Users\\miron\\Desktop\\C#\\FiMaS\\Presentation\\ClientApp\\routes.tsx"); return; } for (var key in module.exports) { if (!Object.prototype.hasOwnProperty.call(module.exports, key)) { continue; } var namedExport = void 0; try { namedExport = module.exports[key]; } catch (err) { continue; } __REACT_HOT_LOADER__.register(namedExport, key, "C:\\Users\\miron\\Desktop\\C#\\FiMaS\\Presentation\\ClientApp\\routes.tsx"); } } })();
+ ;(function register() { /* react-hot-loader/webpack */ if (process.env.NODE_ENV !== 'production') { if (typeof __REACT_HOT_LOADER__ === 'undefined') { return; } if (typeof module.exports === 'function') { __REACT_HOT_LOADER__.register(module.exports, 'module.exports', "C:\\Users\\Ilie Andrei Daneliuc\\Desktop\\FiMaS\\Presentation\\ClientApp\\routes.tsx"); return; } for (var key in module.exports) { if (!Object.prototype.hasOwnProperty.call(module.exports, key)) { continue; } var namedExport = void 0; try { namedExport = module.exports[key]; } catch (err) { continue; } __REACT_HOT_LOADER__.register(namedExport, key, "C:\\Users\\Ilie Andrei Daneliuc\\Desktop\\FiMaS\\Presentation\\ClientApp\\routes.tsx"); } } })();
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(1), __webpack_require__(5)(module)))
 
 /***/ }),
@@ -3060,7 +3060,7 @@ if (true) {
 }
 
 
- ;(function register() { /* react-hot-loader/webpack */ if (process.env.NODE_ENV !== 'production') { if (typeof __REACT_HOT_LOADER__ === 'undefined') { return; } if (typeof module.exports === 'function') { __REACT_HOT_LOADER__.register(module.exports, 'module.exports', "C:\\Users\\miron\\Desktop\\C#\\FiMaS\\Presentation\\ClientApp\\boot.tsx"); return; } for (var key in module.exports) { if (!Object.prototype.hasOwnProperty.call(module.exports, key)) { continue; } var namedExport = void 0; try { namedExport = module.exports[key]; } catch (err) { continue; } __REACT_HOT_LOADER__.register(namedExport, key, "C:\\Users\\miron\\Desktop\\C#\\FiMaS\\Presentation\\ClientApp\\boot.tsx"); } } })();
+ ;(function register() { /* react-hot-loader/webpack */ if (process.env.NODE_ENV !== 'production') { if (typeof __REACT_HOT_LOADER__ === 'undefined') { return; } if (typeof module.exports === 'function') { __REACT_HOT_LOADER__.register(module.exports, 'module.exports', "C:\\Users\\Ilie Andrei Daneliuc\\Desktop\\FiMaS\\Presentation\\ClientApp\\boot.tsx"); return; } for (var key in module.exports) { if (!Object.prototype.hasOwnProperty.call(module.exports, key)) { continue; } var namedExport = void 0; try { namedExport = module.exports[key]; } catch (err) { continue; } __REACT_HOT_LOADER__.register(namedExport, key, "C:\\Users\\Ilie Andrei Daneliuc\\Desktop\\FiMaS\\Presentation\\ClientApp\\boot.tsx"); } } })();
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(1), __webpack_require__(5)(module)))
 
 /***/ }),
@@ -8194,7 +8194,7 @@ var Counter = (function (_super) {
 
 
 
- ;(function register() { /* react-hot-loader/webpack */ if (process.env.NODE_ENV !== 'production') { if (typeof __REACT_HOT_LOADER__ === 'undefined') { return; } if (typeof module.exports === 'function') { __REACT_HOT_LOADER__.register(module.exports, 'module.exports', "C:\\Users\\miron\\Desktop\\C#\\FiMaS\\Presentation\\ClientApp\\components\\Counter.tsx"); return; } for (var key in module.exports) { if (!Object.prototype.hasOwnProperty.call(module.exports, key)) { continue; } var namedExport = void 0; try { namedExport = module.exports[key]; } catch (err) { continue; } __REACT_HOT_LOADER__.register(namedExport, key, "C:\\Users\\miron\\Desktop\\C#\\FiMaS\\Presentation\\ClientApp\\components\\Counter.tsx"); } } })();
+ ;(function register() { /* react-hot-loader/webpack */ if (process.env.NODE_ENV !== 'production') { if (typeof __REACT_HOT_LOADER__ === 'undefined') { return; } if (typeof module.exports === 'function') { __REACT_HOT_LOADER__.register(module.exports, 'module.exports', "C:\\Users\\Ilie Andrei Daneliuc\\Desktop\\FiMaS\\Presentation\\ClientApp\\components\\Counter.tsx"); return; } for (var key in module.exports) { if (!Object.prototype.hasOwnProperty.call(module.exports, key)) { continue; } var namedExport = void 0; try { namedExport = module.exports[key]; } catch (err) { continue; } __REACT_HOT_LOADER__.register(namedExport, key, "C:\\Users\\Ilie Andrei Daneliuc\\Desktop\\FiMaS\\Presentation\\ClientApp\\components\\Counter.tsx"); } } })();
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(1), __webpack_require__(5)(module)))
 
 /***/ }),
@@ -8264,7 +8264,7 @@ var FetchData = (function (_super) {
 
 
 
- ;(function register() { /* react-hot-loader/webpack */ if (process.env.NODE_ENV !== 'production') { if (typeof __REACT_HOT_LOADER__ === 'undefined') { return; } if (typeof module.exports === 'function') { __REACT_HOT_LOADER__.register(module.exports, 'module.exports', "C:\\Users\\miron\\Desktop\\C#\\FiMaS\\Presentation\\ClientApp\\components\\FetchData.tsx"); return; } for (var key in module.exports) { if (!Object.prototype.hasOwnProperty.call(module.exports, key)) { continue; } var namedExport = void 0; try { namedExport = module.exports[key]; } catch (err) { continue; } __REACT_HOT_LOADER__.register(namedExport, key, "C:\\Users\\miron\\Desktop\\C#\\FiMaS\\Presentation\\ClientApp\\components\\FetchData.tsx"); } } })();
+ ;(function register() { /* react-hot-loader/webpack */ if (process.env.NODE_ENV !== 'production') { if (typeof __REACT_HOT_LOADER__ === 'undefined') { return; } if (typeof module.exports === 'function') { __REACT_HOT_LOADER__.register(module.exports, 'module.exports', "C:\\Users\\Ilie Andrei Daneliuc\\Desktop\\FiMaS\\Presentation\\ClientApp\\components\\FetchData.tsx"); return; } for (var key in module.exports) { if (!Object.prototype.hasOwnProperty.call(module.exports, key)) { continue; } var namedExport = void 0; try { namedExport = module.exports[key]; } catch (err) { continue; } __REACT_HOT_LOADER__.register(namedExport, key, "C:\\Users\\Ilie Andrei Daneliuc\\Desktop\\FiMaS\\Presentation\\ClientApp\\components\\FetchData.tsx"); } } })();
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(1), __webpack_require__(5)(module)))
 
 /***/ }),
@@ -8349,7 +8349,7 @@ var Home = (function (_super) {
 
 
 
- ;(function register() { /* react-hot-loader/webpack */ if (process.env.NODE_ENV !== 'production') { if (typeof __REACT_HOT_LOADER__ === 'undefined') { return; } if (typeof module.exports === 'function') { __REACT_HOT_LOADER__.register(module.exports, 'module.exports', "C:\\Users\\miron\\Desktop\\C#\\FiMaS\\Presentation\\ClientApp\\components\\Home.tsx"); return; } for (var key in module.exports) { if (!Object.prototype.hasOwnProperty.call(module.exports, key)) { continue; } var namedExport = void 0; try { namedExport = module.exports[key]; } catch (err) { continue; } __REACT_HOT_LOADER__.register(namedExport, key, "C:\\Users\\miron\\Desktop\\C#\\FiMaS\\Presentation\\ClientApp\\components\\Home.tsx"); } } })();
+ ;(function register() { /* react-hot-loader/webpack */ if (process.env.NODE_ENV !== 'production') { if (typeof __REACT_HOT_LOADER__ === 'undefined') { return; } if (typeof module.exports === 'function') { __REACT_HOT_LOADER__.register(module.exports, 'module.exports', "C:\\Users\\Ilie Andrei Daneliuc\\Desktop\\FiMaS\\Presentation\\ClientApp\\components\\Home.tsx"); return; } for (var key in module.exports) { if (!Object.prototype.hasOwnProperty.call(module.exports, key)) { continue; } var namedExport = void 0; try { namedExport = module.exports[key]; } catch (err) { continue; } __REACT_HOT_LOADER__.register(namedExport, key, "C:\\Users\\Ilie Andrei Daneliuc\\Desktop\\FiMaS\\Presentation\\ClientApp\\components\\Home.tsx"); } } })();
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(1), __webpack_require__(5)(module)))
 
 /***/ }),
@@ -8389,7 +8389,7 @@ var Layout = (function (_super) {
 
 
 
- ;(function register() { /* react-hot-loader/webpack */ if (process.env.NODE_ENV !== 'production') { if (typeof __REACT_HOT_LOADER__ === 'undefined') { return; } if (typeof module.exports === 'function') { __REACT_HOT_LOADER__.register(module.exports, 'module.exports', "C:\\Users\\miron\\Desktop\\C#\\FiMaS\\Presentation\\ClientApp\\components\\Layout.tsx"); return; } for (var key in module.exports) { if (!Object.prototype.hasOwnProperty.call(module.exports, key)) { continue; } var namedExport = void 0; try { namedExport = module.exports[key]; } catch (err) { continue; } __REACT_HOT_LOADER__.register(namedExport, key, "C:\\Users\\miron\\Desktop\\C#\\FiMaS\\Presentation\\ClientApp\\components\\Layout.tsx"); } } })();
+ ;(function register() { /* react-hot-loader/webpack */ if (process.env.NODE_ENV !== 'production') { if (typeof __REACT_HOT_LOADER__ === 'undefined') { return; } if (typeof module.exports === 'function') { __REACT_HOT_LOADER__.register(module.exports, 'module.exports', "C:\\Users\\Ilie Andrei Daneliuc\\Desktop\\FiMaS\\Presentation\\ClientApp\\components\\Layout.tsx"); return; } for (var key in module.exports) { if (!Object.prototype.hasOwnProperty.call(module.exports, key)) { continue; } var namedExport = void 0; try { namedExport = module.exports[key]; } catch (err) { continue; } __REACT_HOT_LOADER__.register(namedExport, key, "C:\\Users\\Ilie Andrei Daneliuc\\Desktop\\FiMaS\\Presentation\\ClientApp\\components\\Layout.tsx"); } } })();
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(1), __webpack_require__(5)(module)))
 
 /***/ }),
@@ -8453,7 +8453,7 @@ var NavMenu = (function (_super) {
 
 
 
- ;(function register() { /* react-hot-loader/webpack */ if (process.env.NODE_ENV !== 'production') { if (typeof __REACT_HOT_LOADER__ === 'undefined') { return; } if (typeof module.exports === 'function') { __REACT_HOT_LOADER__.register(module.exports, 'module.exports', "C:\\Users\\miron\\Desktop\\C#\\FiMaS\\Presentation\\ClientApp\\components\\NavMenu.tsx"); return; } for (var key in module.exports) { if (!Object.prototype.hasOwnProperty.call(module.exports, key)) { continue; } var namedExport = void 0; try { namedExport = module.exports[key]; } catch (err) { continue; } __REACT_HOT_LOADER__.register(namedExport, key, "C:\\Users\\miron\\Desktop\\C#\\FiMaS\\Presentation\\ClientApp\\components\\NavMenu.tsx"); } } })();
+ ;(function register() { /* react-hot-loader/webpack */ if (process.env.NODE_ENV !== 'production') { if (typeof __REACT_HOT_LOADER__ === 'undefined') { return; } if (typeof module.exports === 'function') { __REACT_HOT_LOADER__.register(module.exports, 'module.exports', "C:\\Users\\Ilie Andrei Daneliuc\\Desktop\\FiMaS\\Presentation\\ClientApp\\components\\NavMenu.tsx"); return; } for (var key in module.exports) { if (!Object.prototype.hasOwnProperty.call(module.exports, key)) { continue; } var namedExport = void 0; try { namedExport = module.exports[key]; } catch (err) { continue; } __REACT_HOT_LOADER__.register(namedExport, key, "C:\\Users\\Ilie Andrei Daneliuc\\Desktop\\FiMaS\\Presentation\\ClientApp\\components\\NavMenu.tsx"); } } })();
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(1), __webpack_require__(5)(module)))
 
 /***/ }),
@@ -8485,6 +8485,7 @@ var Register = (function (_super) {
         _this.state = {
             countries: [],
             cities: [],
+            errors: "",
             name: "",
             password: "",
             confirmPassword: "",
@@ -8492,6 +8493,14 @@ var Register = (function (_super) {
             country: "",
             city: ""
         };
+        var errors = localStorage.getItem("errors");
+        localStorage.removeItem("errors");
+        if (errors != null) {
+            _this.setState({
+                errors: errors
+            });
+            _this.state.errors.replace(",", "<br>");
+        }
         fetch('api/countries')
             .then(function (response) { return response.json(); })
             .then(function (data) {
@@ -8502,6 +8511,7 @@ var Register = (function (_super) {
         _this.renderCountries = _this.renderCountries.bind(_this);
         _this.renderCities = _this.renderCities.bind(_this);
         _this.onSubmit = _this.onSubmit.bind(_this);
+        _this.checkInput = _this.checkInput.bind(_this);
         return _this;
     }
     Register.prototype.getCitiesByCountry = function (e) {
@@ -8519,7 +8529,32 @@ var Register = (function (_super) {
             _a));
         var _a;
     };
+    Register.prototype.checkInput = function () {
+        var errors = [];
+        if (this.state.name.length < 3 || this.state.name.length > 32) {
+            errors[errors.length] = "ERROR: Name length.";
+        }
+        if (this.state.password.length < 8 || this.state.password.length > 32) {
+            errors[errors.length] = "ERROR: Password length.";
+        }
+        if (this.state.password != this.state.confirmPassword) {
+            errors[errors.length] = "ERROR: Password and Confirm Password.";
+        }
+        if (this.state.country == "") {
+            errors[errors.length] = "ERROR: Country.";
+        }
+        if (this.state.city == "") {
+            errors[errors.length] = "ERROR: City.";
+        }
+        localStorage.setItem("errors", errors.toString());
+    };
     Register.prototype.onSubmit = function () {
+        /*
+        this.setState({
+            errors: ""
+        });
+        this.checkInput();
+        */
         fetch('api/users', {
             method: 'POST',
             headers: {
@@ -8541,6 +8576,8 @@ var Register = (function (_super) {
                 __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("div", { className: "row" },
                     __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("div", { className: "col-xs-12" },
                         __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("h2", { className: "register-title" }, "Register New Account"))),
+                __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("div", { className: "row" },
+                    __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("div", { className: "col-xs-12" }, this.state.errors)),
                 registerForm)));
     };
     Register.prototype.renderRegisterForm = function () {
@@ -8602,7 +8639,7 @@ var Register = (function (_super) {
 
 
 
- ;(function register() { /* react-hot-loader/webpack */ if (process.env.NODE_ENV !== 'production') { if (typeof __REACT_HOT_LOADER__ === 'undefined') { return; } if (typeof module.exports === 'function') { __REACT_HOT_LOADER__.register(module.exports, 'module.exports', "C:\\Users\\miron\\Desktop\\C#\\FiMaS\\Presentation\\ClientApp\\components\\Register.tsx"); return; } for (var key in module.exports) { if (!Object.prototype.hasOwnProperty.call(module.exports, key)) { continue; } var namedExport = void 0; try { namedExport = module.exports[key]; } catch (err) { continue; } __REACT_HOT_LOADER__.register(namedExport, key, "C:\\Users\\miron\\Desktop\\C#\\FiMaS\\Presentation\\ClientApp\\components\\Register.tsx"); } } })();
+ ;(function register() { /* react-hot-loader/webpack */ if (process.env.NODE_ENV !== 'production') { if (typeof __REACT_HOT_LOADER__ === 'undefined') { return; } if (typeof module.exports === 'function') { __REACT_HOT_LOADER__.register(module.exports, 'module.exports', "C:\\Users\\Ilie Andrei Daneliuc\\Desktop\\FiMaS\\Presentation\\ClientApp\\components\\Register.tsx"); return; } for (var key in module.exports) { if (!Object.prototype.hasOwnProperty.call(module.exports, key)) { continue; } var namedExport = void 0; try { namedExport = module.exports[key]; } catch (err) { continue; } __REACT_HOT_LOADER__.register(namedExport, key, "C:\\Users\\Ilie Andrei Daneliuc\\Desktop\\FiMaS\\Presentation\\ClientApp\\components\\Register.tsx"); } } })();
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(1), __webpack_require__(5)(module)))
 
 /***/ }),
