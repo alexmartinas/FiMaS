@@ -1,0 +1,16 @@
+﻿
+.body-container{
+        padding-top:73px;
+}
+.input-group-custom{
+    display:block;
+}
+.generic-button {
+    border: 0;
+    background-color: #4189c7;
+    padding:10px 20px;
+    margin:0 auto;
+    color:white;
+    font-weight:500;
+    border-radius:4px;
+}
