@@ -16,6 +16,7 @@ interface IRegister {
 
     name: string;
     password: string;
+    confirmPassword: string;
     email: string;
     city: string;
     country: string;
@@ -30,6 +31,7 @@ export class Register extends React.Component<RouteComponentProps<{}>, IRegister
 
             name: "",
             password: "",
+            confirmPassword: "",
             email: "",
             country: "",
             city: ""
@@ -46,15 +48,6 @@ export class Register extends React.Component<RouteComponentProps<{}>, IRegister
         this.renderCountries = this.renderCountries.bind(this);
         this.renderCities = this.renderCities.bind(this);
         this.onSubmit = this.onSubmit.bind(this);
-    }
-
-    public render() {
-        let registerForm = this.renderRegisterForm();
-
-        return <div>
-            <h1>Register Page</h1>
-            {registerForm}
-        </div>;
     }
 
     private getCitiesByCountry(e: any) {
@@ -89,45 +82,105 @@ export class Register extends React.Component<RouteComponentProps<{}>, IRegister
         })
     }
 
+    public render() {
+        let registerForm = this.renderRegisterForm();
+
+        return (
+            <div className="container">
+                <div className="register-box">
+                    <div className="row">
+                        <div className="col-xs-12">
+                            <h2 className="register-title">Register New Account</h2>
+                        </div>
+                    </div>
+                            {registerForm}
+                </div>
+            </div>
+        );
+    }
+
     private renderRegisterForm() {
         return (
-            <form>
-                <label htmlFor="name">Enter your name</label>
-                <br />
-                <input
-                    value={this.state.name}
-                    onChange={this.onChange}
-                    name="name"
-                    type="text" />
-                <br />
-                <label htmlFor="password">Enter your password</label>
-                <br />
-                <input
-                    value={this.state.password}
-                    onChange={this.onChange}
-                    name="password"
-                    type="password" />
-                <br />
-                <label htmlFor="email">Enter your email</label>
-                <br />
-                <input
-                    value={this.state.email}
-                    onChange={this.onChange}
-                    name="email"
-                    type="email" />
-                <br />
-                <label htmlFor="country">Select your country</label>
-                <br />
-                {
-                    this.renderCountries()
-                }
-                <br />
-                <label htmlFor="city">Select your city</label>
-                <br />
-                {
-                    this.renderCities()
-                }
-                <br />
+            <form className="register-box-margin">
+                <div className="center">
+                    <div className="row">
+                        <div className="col-xs-12">
+                            <div className="input-group input-group-icon">
+                                <input
+                                    value={this.state.name}
+                                    onChange={this.onChange}
+                                    placeholder="Your Name"
+                                    name="name"
+                                    type="text" />
+                                <div className="input-icon"><i className="glyphicon glyphicon-user"></i></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="row">
+                        <div className="col-xs-12">
+                            <div className="input-group input-group-icon">
+                                <input
+                                    value={this.state.email}
+                                    onChange={this.onChange}
+                                    placeholder="Email Address"
+                                    name="email"
+                                    type="email" />
+                                <div className="input-icon"><i className="glyphicon glyphicon-envelope"></i></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="row">
+                        <div className="col-xs-12">
+                            <div className="input-group input-group-icon">
+                                <input
+                                    value={this.state.password}
+                                    onChange={this.onChange}
+                                    placeholder="Password"
+                                    name="password"
+                                    type="password" />
+                                <div className="input-icon"><i className="glyphicon glyphicon-lock"></i></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="row">
+                        <div className="col-xs-12">
+                            <div className="input-group input-group-icon">
+                                <input
+                                    value={this.state.confirmPassword}
+                                    onChange={this.onChange}
+                                    placeholder="Confirm Password"
+                                    name="confirmPassword"
+                                    type="password" />
+                                <div className="input-icon"><i className="glyphicon glyphicon-lock"></i></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div className="row">
+                    <div className="col-xs-6">
+                        <div className="input-group country-box">
+                            {
+                                this.renderCountries()
+                            }
+                        </div>
+                    </div>
+                   <div className="col-xs-6">
+                        <div className="input-group">
+                            {
+                                this.renderCities()
+                            }
+                        </div>
+                    </div>
+                </div>
+                <div className="row">
+                    <div className="col-md-12 terms-align">
+                        <h4 className="terms-title">Terms and Conditions</h4>
+                        <div className="input-group">
+                            <input type="checkbox" id="terms" />
+                            <label htmlFor="terms">I accept the terms and conditions for signing up.</label>
+                        </div>
+                    </div>
+                </div>
                 <button onClick={this.onSubmit}>Register</button>
             </form>
             );

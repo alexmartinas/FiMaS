@@ -59,7 +59,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "8d2710352536fbe2d2de"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "7c9b14dfcc3a9f72b692"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
@@ -1299,7 +1299,7 @@ exports = module.exports = __webpack_require__(67)(undefined);
 
 
 // module
-exports.push([module.i, ".main-nav li .glyphicon {\r\n    margin-right: 10px;\r\n}\r\n\r\n/* Highlighting rules for nav menu items */\r\n.main-nav li a.active,\r\n.main-nav li a.active:hover,\r\n.main-nav li a.active:focus {\r\n    background-color: #4189C7;\r\n    color: white;\r\n}\r\n\r\n/* Keep the nav menu independent of scrolling and on top of other items */\r\n.main-nav {\r\n    position: fixed;\r\n    top: 0;\r\n    left: 0;\r\n    right: 0;\r\n    z-index: 1;\r\n}\r\n\r\n@media (max-width: 767px) {\r\n    /* On small screens, the nav menu spans the full width of the screen. Leave a space for it. */\r\n    body {\r\n        padding-top: 50px;\r\n    }\r\n}\r\n\r\n@media (min-width: 768px) {\r\n    /* On small screens, convert the nav menu to a vertical sidebar */\r\n    .main-nav {\r\n        height: 100%;\r\n        width: calc(25% - 20px);\r\n    }\r\n    .main-nav .navbar {\r\n        border-radius: 0px;\r\n        border-width: 0px;\r\n        height: 100%;\r\n    }\r\n    .main-nav .navbar-header {\r\n        float: none;\r\n    }\r\n    .main-nav .navbar-collapse {\r\n        border-top: 1px solid #444;\r\n        padding: 0px;\r\n    }\r\n    .main-nav .navbar ul {\r\n        float: none;\r\n    }\r\n    .main-nav .navbar li {\r\n        float: none;\r\n        font-size: 15px;\r\n        margin: 6px;\r\n    }\r\n    .main-nav .navbar li a {\r\n        padding: 10px 16px;\r\n        border-radius: 4px;\r\n    }\r\n    .main-nav .navbar a {\r\n        /* If a menu item's text is too long, truncate it */\r\n        width: 100%;\r\n        white-space: nowrap;\r\n        overflow: hidden;\r\n        text-overflow: ellipsis;\r\n    }\r\n}\r\n", ""]);
+exports.push([module.i, ".register-box-margin {\r\n    margin: auto;\r\n    width: 80%;\r\n}\r\n\r\n.center {\r\n    margin: auto;\r\n    width: 60%;\r\n}\r\n\r\nbody {\r\n    padding: 1em;\r\n    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;\r\n    font-size: 16px;\r\n    color: #020202;\r\n    background-color: #e3e3e3;\r\n}\r\n\r\n\r\n.register-title {\r\n    text-align: center;\r\n    color: #7ed321;\r\n    padding-bottom: 15px;\r\n    margin: auto;\r\n    width: 60%;\r\n}\r\n\r\n.term-title {\r\n    color: #7ed321;\r\n    padding-bottom: 15px;\r\n    margin: auto;\r\n    width: 100%;\r\n}\r\n\r\n.register-box {\r\n    max-width: 38em;\r\n    padding: 1em 3em 2em 3em;\r\n    margin: 0em auto;\r\n    background-color: #fff;\r\n    border-radius: 25px;\r\n    box-shadow: 0px 3px 10px -2px rgba(0, 0, 0, 0.2);\r\n}\r\n\r\ninput, input[type=\"radio\"] + label, input[type=\"checkbox\"] + label:before, select option, select {\r\n    width: 100%;\r\n    padding: 1em;\r\n    line-height: 1.4;\r\n    background-color: #f9f9f9;\r\n    border: 1px solid #e5e5e5;\r\n    border-radius: 5px;\r\n    -webkit-transition: 0.35s ease-in-out;\r\n    -moz-transition: 0.35s ease-in-out;\r\n    -o-transition: 0.35s ease-in-out;\r\n    transition: 0.35s ease-in-out;\r\n    transition: all 0.35s ease-in-out;\r\n}\r\n\r\ninput:focus {\r\n    outline: 0;\r\n    border-color: #64ac15;\r\n}\r\n\r\ninput:focus + .input-icon i {\r\n    color: #7ed321;\r\n}\r\n\r\ninput:focus + .input-icon:after {\r\n    border-right-color: #7ed321;\r\n}\r\n\r\ninput[type=\"radio\"] {\r\n    display: none;\r\n}\r\n\r\ninput[type=\"radio\"] + label, select {\r\n    display: inline-block;\r\n    width: 50%;\r\n    text-align: center;\r\n    float: left;\r\n    border-radius: 0;\r\n}\r\n\r\ninput[type=\"radio\"] + label:last-of-type {\r\n    border-top-right-radius: 3px;\r\n    border-bottom-right-radius: 3px;\r\n}\r\n\r\ninput[type=\"radio\"] + label i {\r\npadding-right: 0.4em;\r\n}\r\n\r\ninput[type=\"radio\"]:checked + label,input:checked + label:before, select:focus, select:active {\r\n    background-color: #7ed321;\r\n    color: #fff;\r\n    border-color: #64ac15;\r\n}\r\n\r\ninput[type=\"checkbox\"] {\r\n    display: none;\r\n}\r\n\r\ninput[type=\"checkbox\"] + label {\r\n    position: relative;\r\n    display: block;\r\n    padding-left: 1.6em;\r\n}\r\n\r\ninput[type=\"checkbox\"] + label:before {\r\n    position: absolute;\r\n    top: 0.2em;\r\n    left: 0;\r\n    display: block;\r\n    width: 1em;\r\n    height: 1em;\r\n    padding: 0;\r\n    content: \"\";\r\n}\r\n\r\ninput[type=\"checkbox\"] + label:after {\r\n    position: absolute;\r\n    top: 0.45em;\r\n    left: 0.2em;\r\n    font-size: 0.8em;\r\n    color: #fff;\r\n    opacity: 0;\r\n    font-family: FontAwesome;\r\n    content: \"\\F00C\";\r\n}\r\n\r\ninput:checked + label:after {\r\n    opacity: 1;\r\n}\r\n\r\n.country-box {\r\n    width: 100;\r\n    padding-right: 50px;\r\n}\r\n\r\nselect {\r\n    height: 3.4em;\r\n    width: 12em;\r\n    line-height: 2;\r\n}\r\n\r\nselect:first-of-type {\r\n    border-radius: 5px;\r\n}\r\n\r\nselect:last-of-type {\r\n    border-radius: 5px;\r\n}\r\n\r\nselect:focus, select:active {\r\n    outline: 0;\r\n}\r\n\r\nselect option {\r\n    background-color: #7ed321;\r\n    color: #fff;\r\n}\r\n\r\n.input-group {\r\n    margin-bottom: 1em;\r\n    zoom: 1;\r\n}\r\n\r\n.input-group:before, .input-group:after {\r\n    content: \"\";\r\n    display: table;\r\n}\r\n\r\n.input-group:after {\r\n    clear: both;\r\n}\r\n\r\n.input-group-icon {\r\n    position: relative;\r\n}\r\n\r\n.input-group-icon input {\r\n    padding-left: 4.4em;\r\n}\r\n\r\n.input-group-icon .input-icon {\r\n    position: absolute;\r\n    top: 0;\r\n    left: 0;\r\n    width: 3.4em;\r\n    height: 3.4em;\r\n    line-height: 3.4em;\r\n    text-align: center;\r\n    pointer-events: none;\r\n}\r\n\r\n.input-group-icon .input-icon:after {\r\n    position: absolute;\r\n    top: 0.6em;\r\n    bottom: 0.6em;\r\n    left: 3.4em;\r\n    display: block;\r\n    border-right: 1px solid #e5e5e5;\r\n    content: \"\";\r\n    -webkit-transition: 0.35s ease-in-out;\r\n    -moz-transition: 0.35s ease-in-out;\r\n    -o-transition: 0.35s ease-in-out;\r\n    transition: 0.35s ease-in-out;\r\n    transition: all 0.35s ease-in-out;\r\n}\r\n\r\n.input-group-icon .input-icon i {\r\n    -webkit-transition: 0.35s ease-in-out;\r\n    -moz-transition: 0.35s ease-in-out;\r\n    -o-transition: 0.35s ease-in-out;\r\n    transition: 0.35s ease-in-out;\r\n    transition: all 0.35s ease-in-out;\r\n}\r\n\r\n.terms-align {\r\n    margin: auto;\r\n    width: 100%;\r\n}\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n.main-nav li .glyphicon {\r\n    margin-right: 10px;\r\n}\r\n\r\n/* Highlighting rules for nav menu items */\r\n.main-nav li a.active,\r\n.main-nav li a.active:hover,\r\n.main-nav li a.active:focus {\r\n    background-color: #4189C7;\r\n    color: white;\r\n}\r\n\r\n/* Keep the nav menu independent of scrolling and on top of other items */\r\n.main-nav {\r\n    position: fixed;\r\n    top: 0;\r\n    left: 0;\r\n    right: 0;\r\n    z-index: 1;\r\n}\r\n\r\n@media (max-width: 767px) {\r\n    /* On small screens, the nav menu spans the full width of the screen. Leave a space for it. */\r\n    body {\r\n        padding-top: 50px;\r\n    }\r\n}\r\n\r\n@media (min-width: 768px) {\r\n    /* On small screens, convert the nav menu to a vertical sidebar */\r\n    .main-nav {\r\n        height: 100%;\r\n        width: calc(25% - 20px);\r\n    }\r\n    .main-nav .navbar {\r\n        border-radius: 0px;\r\n        border-width: 0px;\r\n        height: 100%;\r\n    }\r\n    .main-nav .navbar-header {\r\n        float: none;\r\n    }\r\n    .main-nav .navbar-collapse {\r\n        border-top: 1px solid #444;\r\n        padding: 0px;\r\n    }\r\n    .main-nav .navbar ul {\r\n        float: none;\r\n    }\r\n    .main-nav .navbar li {\r\n        float: none;\r\n        font-size: 15px;\r\n        margin: 6px;\r\n    }\r\n    .main-nav .navbar li a {\r\n        padding: 10px 16px;\r\n        border-radius: 4px;\r\n    }\r\n    .main-nav .navbar a {\r\n        /* If a menu item's text is too long, truncate it */\r\n        width: 100%;\r\n        white-space: nowrap;\r\n        overflow: hidden;\r\n        text-overflow: ellipsis;\r\n    }\r\n}\r\n", ""]);
 
 // exports
 
@@ -8112,6 +8112,7 @@ var Register = (function (_super) {
             cities: [],
             name: "",
             password: "",
+            confirmPassword: "",
             email: "",
             country: "",
             city: ""
@@ -8128,12 +8129,6 @@ var Register = (function (_super) {
         _this.onSubmit = _this.onSubmit.bind(_this);
         return _this;
     }
-    Register.prototype.render = function () {
-        var registerForm = this.renderRegisterForm();
-        return __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("div", null,
-            __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("h1", null, "Register Page"),
-            registerForm);
-    };
     Register.prototype.getCitiesByCountry = function (e) {
         var _this = this;
         fetch('api/cities')
@@ -8164,28 +8159,53 @@ var Register = (function (_super) {
             })
         });
     };
+    Register.prototype.render = function () {
+        var registerForm = this.renderRegisterForm();
+        return (__WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("div", { className: "container" },
+            __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("div", { className: "register-box" },
+                __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("div", { className: "row" },
+                    __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("div", { className: "col-xs-12" },
+                        __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("h2", { className: "register-title" }, "Register New Account"))),
+                registerForm)));
+    };
     Register.prototype.renderRegisterForm = function () {
-        return (__WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("form", null,
-            __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("label", { htmlFor: "name" }, "Enter your name"),
-            __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("br", null),
-            __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("input", { value: this.state.name, onChange: this.onChange, name: "name", type: "text" }),
-            __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("br", null),
-            __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("label", { htmlFor: "password" }, "Enter your password"),
-            __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("br", null),
-            __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("input", { value: this.state.password, onChange: this.onChange, name: "password", type: "password" }),
-            __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("br", null),
-            __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("label", { htmlFor: "email" }, "Enter your email"),
-            __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("br", null),
-            __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("input", { value: this.state.email, onChange: this.onChange, name: "email", type: "email" }),
-            __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("br", null),
-            __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("label", { htmlFor: "country" }, "Select your country"),
-            __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("br", null),
-            this.renderCountries(),
-            __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("br", null),
-            __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("label", { htmlFor: "city" }, "Select your city"),
-            __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("br", null),
-            this.renderCities(),
-            __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("br", null),
+        return (__WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("form", { className: "register-box-margin" },
+            __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("div", { className: "center" },
+                __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("div", { className: "row" },
+                    __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("div", { className: "col-xs-12" },
+                        __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("div", { className: "input-group input-group-icon" },
+                            __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("input", { value: this.state.name, onChange: this.onChange, placeholder: "Your Name", name: "name", type: "text" }),
+                            __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("div", { className: "input-icon" },
+                                __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("i", { className: "glyphicon glyphicon-user" }))))),
+                __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("div", { className: "row" },
+                    __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("div", { className: "col-xs-12" },
+                        __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("div", { className: "input-group input-group-icon" },
+                            __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("input", { value: this.state.email, onChange: this.onChange, placeholder: "Email Address", name: "email", type: "email" }),
+                            __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("div", { className: "input-icon" },
+                                __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("i", { className: "glyphicon glyphicon-envelope" }))))),
+                __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("div", { className: "row" },
+                    __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("div", { className: "col-xs-12" },
+                        __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("div", { className: "input-group input-group-icon" },
+                            __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("input", { value: this.state.password, onChange: this.onChange, placeholder: "Password", name: "password", type: "password" }),
+                            __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("div", { className: "input-icon" },
+                                __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("i", { className: "glyphicon glyphicon-lock" }))))),
+                __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("div", { className: "row" },
+                    __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("div", { className: "col-xs-12" },
+                        __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("div", { className: "input-group input-group-icon" },
+                            __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("input", { value: this.state.confirmPassword, onChange: this.onChange, placeholder: "Confirm Password", name: "confirmPassword", type: "password" }),
+                            __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("div", { className: "input-icon" },
+                                __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("i", { className: "glyphicon glyphicon-lock" })))))),
+            __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("div", { className: "row" },
+                __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("div", { className: "col-xs-6" },
+                    __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("div", { className: "input-group country-box" }, this.renderCountries())),
+                __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("div", { className: "col-xs-6" },
+                    __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("div", { className: "input-group" }, this.renderCities()))),
+            __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("div", { className: "row" },
+                __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("div", { className: "col-md-12 terms-align" },
+                    __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("h4", { className: "terms-title" }, "Terms and Conditions"),
+                    __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("div", { className: "input-group" },
+                        __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("input", { type: "checkbox", id: "terms" }),
+                        __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("label", { htmlFor: "terms" }, "I accept the terms and conditions for signing up.")))),
             __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("button", { onClick: this.onSubmit }, "Register")));
     };
     Register.prototype.renderCountries = function () {
