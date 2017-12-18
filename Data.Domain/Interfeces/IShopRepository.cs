@@ -8,5 +8,6 @@ namespace Data.Domain.Interfeces
     {
         IReadOnlyList<Shop> GetShopsByCity(string city);
         IReadOnlyList<Shop> GetShopsByUser(Guid userId);
+        Shop GetShopById(Guid shopId);
     }
 }

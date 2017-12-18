@@ -9,7 +9,7 @@ namespace Data.Domain.Interfeces
         IReadOnlyList<Receipt> GetReceiptsByOwner(Guid ownerId);
         IReadOnlyList<Receipt> GetReceiptsByPrintedDate(Guid ownerId,DateTime date);
         void EditRecceipt(Guid id, Receipt receipt);
-        void CreateReceipt(Guid ownerId, DateTime printedAt);
+        void CreateReceipt(Receipt receipt);
         void DeleteReceipt(Guid id);
         void AddProduct(Guid receiptId, Product product, Guid ownerId);
         void DeleteProduct(Guid receiptId, Guid productId);

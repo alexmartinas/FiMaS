@@ -53,9 +53,9 @@ namespace Data.Persistence
 
             // Shop 1 - * Product
             modelBuilder.Entity<Product>()
-                .HasOne(t => t.Shop)
+                .HasOne(t => t.Receipt)
                 .WithMany(t => t.Products)
-                .HasForeignKey(t => t.ShopId);
+                .HasForeignKey(t => t.ReceiptId);
 
             var cascadeFKs = modelBuilder.Model.GetEntityTypes()
                 .SelectMany(t => t.GetForeignKeys())
