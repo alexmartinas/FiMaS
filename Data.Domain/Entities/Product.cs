@@ -26,14 +26,11 @@ namespace Data.Domain.Entities
         [Required]
         public double Quantity { get; private set; }
 
-        public Guid ShopId { get; private set; }
-        public Shop Shop { get; set; }
-
         public Guid ReceiptId { get; private set; }
         public Receipt Receipt { get; set; }
 
         public static Product Create(string name, string category, double price, DateTime boughtAt, string provider,
-            double quantity, Guid shopId, Guid receiptId)
+            double quantity, Guid receiptId)
         {
             return new Product
             {
@@ -44,7 +41,6 @@ namespace Data.Domain.Entities
                 BoughtAt = boughtAt,
                 Provider = provider,
                 Quantity = quantity,
-                ShopId = shopId,
                 ReceiptId = receiptId
             };
         }
@@ -58,7 +54,6 @@ namespace Data.Domain.Entities
             BoughtAt = boughtAt;
             Provider = provider;
             Quantity = quantity;
-            ShopId = shopId;
             ReceiptId = receiptId;
         }
     }
