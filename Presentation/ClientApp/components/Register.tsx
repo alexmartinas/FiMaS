@@ -153,7 +153,7 @@ export class Register extends React.Component<RouteComponentProps<{}>, IRegister
                 <div className="center">
                     <div className="row">
                         <div className="col-xs-12">
-                            <div className="input-group input-group-icon">
+                            <div className="input-group input-group-custom input-group-icon">
                                 <input
                                     value={this.state.name}
                                     onChange={this.onChange}
@@ -166,7 +166,7 @@ export class Register extends React.Component<RouteComponentProps<{}>, IRegister
                     </div>
                     <div className="row">
                         <div className="col-xs-12">
-                            <div className="input-group input-group-icon">
+                            <div className="input-group input-group-custom input-group-icon">
                                 <input
                                     value={this.state.email}
                                     onChange={this.onChange}
@@ -179,7 +179,7 @@ export class Register extends React.Component<RouteComponentProps<{}>, IRegister
                     </div>
                     <div className="row">
                         <div className="col-xs-12">
-                            <div className="input-group input-group-icon">
+                            <div className="input-group input-group-custom input-group-icon">
                                 <input
                                     value={this.state.password}
                                     onChange={this.onChange}
@@ -192,7 +192,7 @@ export class Register extends React.Component<RouteComponentProps<{}>, IRegister
                     </div>
                     <div className="row">
                         <div className="col-xs-12">
-                            <div className="input-group input-group-icon">
+                            <div className="input-group input-group-custom input-group-icon">
                                 <input
                                     value={this.state.confirmPassword}
                                     onChange={this.onChange}
@@ -229,7 +229,7 @@ export class Register extends React.Component<RouteComponentProps<{}>, IRegister
                         </div>
                     </div>
                 </div>
-                <button onClick={this.onSubmit}>Register</button>
+                <button className="generic-button" onClick={this.onSubmit}>Register</button>
             </form>
             );
     }
