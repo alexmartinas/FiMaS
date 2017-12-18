@@ -59,7 +59,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "d8dd96533ae3101386b5"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "083554966519ef192f62"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
@@ -1299,7 +1299,7 @@ exports = module.exports = __webpack_require__(33)(undefined);
 
 
 // module
-exports.push([module.i, "\r\n.body-container{\r\n        padding-top:73px;\r\n}\r\n.input-group-custom{\r\n    display:block;\r\n}\r\n.generic-button {\r\n    border: 0;\r\n    background-color: #4189c7;\r\n    padding:10px 20px;\r\n    margin:0 auto;\r\n    color:white;\r\n    font-weight:500;\r\n    border-radius:4px;\r\n}\r\n@media(max-width:768px) {\r\n    .body-container {\r\n        padding-top:10px;\r\n    }\r\n    .logo-home {\r\n        display:block;\r\n        float:none;\r\n        padding:10px 0px;\r\n    }\r\n    .navbar-brand {\r\n        height:auto;\r\n    }\r\n}\r\n", ""]);
+exports.push([module.i, "\r\n.body-container{\r\n        padding-top:73px;\r\n}\r\n.input-group-custom{\r\n    display:block;\r\n}\r\n.generic-button {\r\n    border: 0;\r\n    background-color: #4189c7;\r\n    padding:10px 20px;\r\n    margin:0 auto;\r\n    color:white;\r\n    font-weight:500;\r\n    border-radius:4px;\r\n}\r\n@media(max-width:768px) {\r\n    .body-container {\r\n        padding-top:10px;\r\n    }\r\n    .logo-home {\r\n        display:block;\r\n        float:none;\r\n        padding:10px 0;\r\n    }\r\n    .navbar-brand {\r\n        height:auto;\r\n    }\r\n}\r\n", ""]);
 
 // exports
 
@@ -8549,13 +8549,13 @@ var Register = (function (_super) {
                 __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("div", { className: "row" },
                     __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("div", { className: "col-xs-12" },
                         __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("div", { className: "input-group input-group-custom input-group-icon" },
-                            __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("input", { value: this.state.name, onChange: this.onChange, placeholder: "Your Name", name: "name", type: "text" }),
+                            __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("input", { value: this.state.name, onChange: this.onChange, placeholder: "Your Name", name: "name", required: true, type: "text" }),
                             __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("div", { className: "input-icon" },
                                 __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("i", { className: "glyphicon glyphicon-user" }))))),
                 __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("div", { className: "row" },
                     __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("div", { className: "col-xs-12" },
                         __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("div", { className: "input-group input-group-custom input-group-icon" },
-                            __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("input", { value: this.state.email, onChange: this.onChange, placeholder: "Email Address", name: "email", type: "email" }),
+                            __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("input", { value: this.state.email, onChange: this.onChange, placeholder: "Email Address", name: "email", required: true, type: "email" }),
                             __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("div", { className: "input-icon" },
                                 __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("i", { className: "glyphicon glyphicon-envelope" }))))),
                 __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("div", { className: "row" },
