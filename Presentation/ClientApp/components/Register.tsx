@@ -13,6 +13,7 @@ interface ICity {
 interface IRegister {
     countries: ICountry[];
     cities: ICity[];
+    errors: string;
 
     name: string;
     password: string;
@@ -28,6 +29,7 @@ export class Register extends React.Component<RouteComponentProps<{}>, IRegister
         this.state = {
             countries: [],
             cities: [],
+            errors: "",
 
             name: "",
             password: "",
@@ -36,6 +38,15 @@ export class Register extends React.Component<RouteComponentProps<{}>, IRegister
             country: "",
             city: ""
         };
+
+        let errors = localStorage.getItem("errors");
+        localStorage.removeItem("errors");
+        if (errors != null) {
+            this.setState({
+                errors: errors
+            });
+            this.state.errors.replace(",", "<br>");
+        }
 
         fetch('api/countries')
             .then(response => response.json() as Promise<ICountry[]>)
@@ -48,6 +59,7 @@ export class Register extends React.Component<RouteComponentProps<{}>, IRegister
         this.renderCountries = this.renderCountries.bind(this);
         this.renderCities = this.renderCities.bind(this);
         this.onSubmit = this.onSubmit.bind(this);
+        this.checkInput = this.checkInput.bind(this);
     }
 
     private getCitiesByCountry(e: any) {
@@ -64,22 +76,53 @@ export class Register extends React.Component<RouteComponentProps<{}>, IRegister
         this.setState({
             [e.target.name]: e.target.value
         });
+        console.log(this.state.errors);
+    }
+
+    private checkInput() {
+        let errors = [];
+        if (this.state.name.length < 3 || this.state.name.length > 32) {
+            errors[errors.length] = "ERROR: Name length.";
+        }
+        if (this.state.password.length < 8 || this.state.password.length > 32) {
+            errors[errors.length] = "ERROR: Password length.";
+        }
+        if (this.state.password != this.state.confirmPassword) {
+            errors[errors.length] = "ERROR: Password and Confirm Password.";
+        }
+        if (this.state.country == "") {
+            errors[errors.length] = "ERROR: Country.";
+        }
+        if (this.state.city == "") {
+            errors[errors.length] = "ERROR: City.";
+        }
+        localStorage.setItem("errors", errors.toString());
     }
 
     private onSubmit() {
-        fetch('api/users', {
-            method: 'POST',
-            headers: {
-                'Accept': 'application/json',
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({
-                "name": this.state.name,
-                "password": this.state.password,
-                "email": this.state.email,
-                "city": this.state.city
+        this.setState({
+            errors: ""
+        });
+        this.checkInput();
+
+        if (this.state.errors.length != 0) {
+            fetch('api/users', {
+                method: 'POST',
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    "name": this.state.name,
+                    "password": this.state.password,
+                    "email": this.state.email,
+                    "city": this.state.city
+                })
             })
-        })
+        }
+        else {
+            this.render();
+        }
     }
 
     public render() {
@@ -91,6 +134,11 @@ export class Register extends React.Component<RouteComponentProps<{}>, IRegister
                     <div className="row">
                         <div className="col-xs-12">
                             <h2 className="register-title">Register New Account</h2>
+                        </div>
+                    </div>
+                    <div className="row">
+                        <div className="col-xs-12">
+                            {this.state.errors}
                         </div>
                     </div>
                             {registerForm}
