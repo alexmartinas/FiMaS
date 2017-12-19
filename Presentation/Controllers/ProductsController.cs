@@ -37,9 +37,12 @@ namespace Presentation.Controllers
         }
 
         [HttpGet]
-        public IQueryable<Product> Get()
+        public ActionResult Get()
         {
-            return _repository.GetProducts();
+            var products =  _repository.GetProducts();
+            var results = products.Select(product => Mapper.Map<GetProductModel>(product)).ToList();
+            return Ok(results);
         }
+
     }
 }

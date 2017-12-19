@@ -2,6 +2,8 @@
 {
     public class GetShopModel
     {
+        public System.Guid ShopId { get; set; }
+
         public string Name { get; set; }
 
         public string Address { get; set; }

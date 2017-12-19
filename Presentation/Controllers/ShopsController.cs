@@ -27,6 +27,7 @@ namespace Presentation.Controllers
 
             return entities.Select(shop => new GetShopModel
             {
+                ShopId = shop.ShopId,
                 Name = shop.Name,
                 Address = shop.Address,
                 City = shop.City.Name,
@@ -42,6 +43,7 @@ namespace Presentation.Controllers
             
             return Ok(new GetShopModel
             {
+                ShopId = shop.ShopId,
                 Name = shop.Name,
                 Address = shop.Address,
                 City = shop.City.Name,
@@ -56,6 +58,7 @@ namespace Presentation.Controllers
 
             return entities.Select(shop => new GetShopModel
             {
+                ShopId = shop.ShopId,
                 Name = shop.Name,
                 Address = shop.Address,
                 City = shop.City.Name,

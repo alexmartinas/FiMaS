@@ -31,7 +31,8 @@ namespace Presentation.Controllers
             var entities = _userRepository.GetAll();
 
             return entities.Select(user => new GetUserModel
-                {
+            {
+                    UserId = user.UserId,
                     Name = user.Name,
                     Email = user.Email,
                     Country = user.City.Country.Name,
@@ -45,6 +46,7 @@ namespace Presentation.Controllers
         {
             var entity = _userRepository.Get(id);
             var getUserModel = new GetUserModel {
+                UserId = entity.UserId,
                 Name = entity.Name,
                 Email = entity.Email,
                 Country = entity.City.Country.Name,

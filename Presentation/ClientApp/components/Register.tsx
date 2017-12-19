@@ -76,7 +76,6 @@ export class Register extends React.Component<RouteComponentProps<{}>, IRegister
         this.setState({
             [e.target.name]: e.target.value
         });
-        console.log(this.state.errors);
     }
 
     private checkInput() {
@@ -100,29 +99,26 @@ export class Register extends React.Component<RouteComponentProps<{}>, IRegister
     }
 
     private onSubmit() {
+        /*
         this.setState({
             errors: ""
         });
         this.checkInput();
+        */
 
-        if (this.state.errors.length != 0) {
-            fetch('api/users', {
-                method: 'POST',
-                headers: {
-                    'Accept': 'application/json',
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({
-                    "name": this.state.name,
-                    "password": this.state.password,
-                    "email": this.state.email,
-                    "city": this.state.city
-                })
+        fetch('api/users', {
+            method: 'POST',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                "name": this.state.name,
+                "password": this.state.password,
+                "email": this.state.email,
+                "city": this.state.city
             })
-        }
-        else {
-            this.render();
-        }
+        })
     }
 
     public render() {
@@ -159,6 +155,7 @@ export class Register extends React.Component<RouteComponentProps<{}>, IRegister
                                     onChange={this.onChange}
                                     placeholder="Your Name"
                                     name="name"
+                                    required
                                     type="text" />
                                 <div className="input-icon"><i className="glyphicon glyphicon-user"></i></div>
                             </div>
@@ -172,6 +169,7 @@ export class Register extends React.Component<RouteComponentProps<{}>, IRegister
                                     onChange={this.onChange}
                                     placeholder="Email Address"
                                     name="email"
+                                    required
                                     type="email" />
                                 <div className="input-icon"><i className="glyphicon glyphicon-envelope"></i></div>
                             </div>
@@ -183,6 +181,7 @@ export class Register extends React.Component<RouteComponentProps<{}>, IRegister
                                 <input
                                     value={this.state.password}
                                     onChange={this.onChange}
+                                    required
                                     placeholder="Password"
                                     name="password"
                                     type="password" />
@@ -205,14 +204,14 @@ export class Register extends React.Component<RouteComponentProps<{}>, IRegister
                     </div>
                 </div>
                 <div className="row">
-                    <div className="col-xs-6">
+                    <div className="col-xs-12 col-sm-6">
                         <div className="input-group country-box">
                             {
                                 this.renderCountries()
                             }
                         </div>
                     </div>
-                   <div className="col-xs-6">
+                   <div className="col-xs-6 col-sm-6">
                         <div className="input-group">
                             {
                                 this.renderCities()

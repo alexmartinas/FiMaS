@@ -10,5 +10,6 @@ namespace Presentation.DTOs.ProductModels
         public DateTime BoughtAt { get;  set; }
         public string Provider { get;  set; }
         public double Quantity { get; set; }
+        public Guid ReceiptId { get; set; }
     }
 }

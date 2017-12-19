@@ -1,6 +1,7 @@
 ﻿using Data.Domain.Entities;
 using Data.Domain.Interfeces;
 using Data.Persistence;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,7 +18,7 @@ namespace Business
         }
 
         public IReadOnlyList<Receipt> GetReceiptsByOwner(Guid ownerId) => _databaseContext
-                .Receipts
+                .Receipts.Include(r => r.Shop)
                 .ToList();
 
         public IReadOnlyList<Receipt> GetReceiptsByPrintedDate(Guid ownerId, DateTime date) => _databaseContext
@@ -28,9 +29,10 @@ namespace Business
         {
 
         }
-        public void CreateReceipt(Guid ownerId, DateTime printedAt)
+        public void CreateReceipt(Receipt receipt)
         {
-
+            _databaseContext.Receipts.Add(receipt);
+            _databaseContext.SaveChanges();
         }
         public void DeleteReceipt(Guid id)
         {

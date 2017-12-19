@@ -154,6 +154,7 @@ select:focus, select:active {
 
 select option {
     padding:10px 0;
+    color:black;
 }
 
 .input-group {

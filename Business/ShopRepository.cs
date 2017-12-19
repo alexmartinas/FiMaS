@@ -17,6 +17,8 @@ namespace Business
             _databaseContext = databaseContext; 
         }
 
+        public Shop GetShopById(Guid shopId) => _databaseContext.Shops.FirstOrDefault(s => s.ShopId == shopId);
+
         public IReadOnlyList<Shop> GetShopsByCity(string city) => _databaseContext
                 .Cities
                 .Include(t => t.Shops)
@@ -41,7 +43,7 @@ namespace Business
                 products.AddRange(receipt.Products);
             }
 
-            var shops = products.Select(t => t.Shop).ToList().AsReadOnly();
+            var shops = receipts.Select(t => t.Shop).ToList().AsReadOnly();
 
             return shops;
         }
